@@ -180,6 +180,6 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 
-.server/temp_data.nt
-.server/temp_data.ttl
-.server/temp_log.txt
+server/temp_data.nt
+server/temp_data.ttl
+server/temp_log.txt
