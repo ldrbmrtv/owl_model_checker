@@ -59,8 +59,7 @@ def check_model(id):
         with open(log_file_path) as file:
             log = file.read()
         res = {
-            'valid': True,
-            'log': log
+            'valid': True
         }
         onto.destroy(update_relation=True, update_is_a=True)
         return jsonify(res), 200
