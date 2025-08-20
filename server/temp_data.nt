@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://test"
+         xmlns="http://test#">
+
+<owl:Ontology rdf:about="http://test"/>
+
+<owl:ObjectProperty rdf:about="#in"/>
+
+<owl:ObjectProperty rdf:about="#verbundenZu"/>
+
+<owl:ObjectProperty rdf:about="#verbindet"/>
+
+<owl:DatatypeProperty rdf:about="#bruttoGrundfläche">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#MussInEigenemTreppenraumLiegen">
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:someValuesFrom rdf:resource="#EigenerTreppenraum"/>
+      <owl:onProperty rdf:resource="#in"/>
+    </owl:Restriction>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Nutzungseinheit"/>
+
+<owl:Class rdf:about="#Gebäudeklasse1"/>
+
+<owl:Class rdf:about="#Rettungsweg"/>
+
+<owl:Class rdf:about="#EigenerTreppenraum"/>
+
+<owl:Class rdf:about="#NotwendigeTreppeInEigenemTreppenraum">
+  <rdfs:subClassOf rdf:resource="#NotwendigeTreppe"/>
+  <rdfs:subClassOf rdf:resource="#MussInEigenemTreppenraumLiegen"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NotwendigeTreppe"/>
+
+<owl:Class rdf:about="#Gebäudeklasse2"/>
+
+<owl:Class rdf:about="#Geschoss"/>
+
+<owl:Class rdf:about="#Außentreppe"/>
+
+<owl:NamedIndividual rdf:about="#notwendige_treppe_in_eigenem_treppenraum1">
+  <rdf:type>
+    <owl:Restriction>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+      <owl:onProperty rdf:resource="#in"/>
+    </owl:Restriction>
+  </rdf:type>
+  <rdf:type rdf:resource="#NotwendigeTreppeInEigenemTreppenraum"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#in"/>
+      <owl:allValuesFrom rdf:resource="#EigenerTreppenraum"/>
+    </owl:Restriction>
+  </rdf:type>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#verbundenZu"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdf:type>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#verbindet"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Restriction>
+  </rdf:type>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,579 @@
+@prefix : <http://test#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://test#> .
+
+<http://test> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://test#connects
+:connects rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isConnectedTo .
+
+
+###  http://test#in
+:in rdf:type owl:ObjectProperty .
+
+
+###  http://test#isConnectedTo
+:isConnectedTo rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://test#totalGrossFloorArea
+:totalGrossFloorArea rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://test#BuildingClass1
+:BuildingClass1 rdf:type owl:Class .
+
+
+###  http://test#BuildingClass2
+:BuildingClass2 rdf:type owl:Class .
+
+
+###  http://test#EscapeRoute
+:EscapeRoute rdf:type owl:Class .
+
+
+###  http://test#ExternalStaircase
+:ExternalStaircase rdf:type owl:Class .
+
+
+###  http://test#MustBeLocatedInSeparateStairwell
+:MustBeLocatedInSeparateStairwell rdf:type owl:Class ;
+                                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :in ;
+                                                        owl:someValuesFrom :SeparateStairwell
+                                                      ] .
+
+
+###  http://test#NecessaryStaircase
+:NecessaryStaircase rdf:type owl:Class .
+
+
+###  http://test#NecessaryStaircaseInSeparateStairwell
+:NecessaryStaircaseInSeparateStairwell rdf:type owl:Class ;
+                                       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                                    owl:complementOf :ExternalStaircase
+                                                                                  ]
+                                                                                  [ rdf:type owl:Class ;
+                                                                                    owl:complementOf [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty :in ;
+                                                                                                       owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                            owl:unionOf ( :BuildingClass1
+                                                                                                                                          :BuildingClass2
+                                                                                                                                        )
+                                                                                                                          ]
+                                                                                                     ]
+                                                                                  ]
+                                                                                  [ rdf:type owl:Class ;
+                                                                                    owl:complementOf [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty :connects ;
+                                                                                                       owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                                                       owl:onClass [ owl:intersectionOf ( :Storey
+                                                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                                                            owl:onProperty :isConnectedTo ;
+                                                                                                                                            owl:someValuesFrom :EscapeRoute
+                                                                                                                                          ]
+                                                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                                                            owl:onProperty :in ;
+                                                                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                                            owl:onClass [ owl:intersectionOf ( :UsageUnit
+                                                                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                                                                 owl:onProperty :totalGrossFloorArea ;
+                                                                                                                                                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                                                                                      owl:onDatatype xsd:float ;
+                                                                                                                                                                                                      owl:withRestrictions ( [ xsd:maxInclusive 200.0
+                                                                                                                                                                                                                             ]
+                                                                                                                                                                                                                           )
+                                                                                                                                                                                                    ]
+                                                                                                                                                                               ]
+                                                                                                                                                                             ) ;
+                                                                                                                                                          rdf:type owl:Class
+                                                                                                                                                        ]
+                                                                                                                                          ]
+                                                                                                                                        ) ;
+                                                                                                                     rdf:type owl:Class
+                                                                                                                   ]
+                                                                                                     ]
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf :MustBeLocatedInSeparateStairwell ,
+                                                       :NecessaryStaircase .
+
+
+###  http://test#SeparateStairwell
+:SeparateStairwell rdf:type owl:Class .
+
+
+###  http://test#Storey
+:Storey rdf:type owl:Class .
+
+
+###  http://test#UsageUnit
+:UsageUnit rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://test#c-0-0-0
+:c-0-0-0 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-0 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-0-1
+:c-0-0-1 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-0 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-0-2
+:c-0-0-2 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-0 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-0-3
+:c-0-0-3 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-0 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-0-4
+:c-0-0-4 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-0 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-0-5
+:c-0-0-5 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-0 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-1-0
+:c-0-1-0 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-1 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-1-1
+:c-0-1-1 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-1 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-1-2
+:c-0-1-2 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-1 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-1-3
+:c-0-1-3 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-1 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-1-4
+:c-0-1-4 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-1 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-1-5
+:c-0-1-5 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-1 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-2-0
+:c-0-2-0 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-2 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-2-1
+:c-0-2-1 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-2 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-2-2
+:c-0-2-2 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-2 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-2-3
+:c-0-2-3 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-2 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-2-4
+:c-0-2-4 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-2 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-2-5
+:c-0-2-5 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-2 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-3-0
+:c-0-3-0 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-3 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-3-1
+:c-0-3-1 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-3 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-3-2
+:c-0-3-2 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-3 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-3-3
+:c-0-3-3 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-3 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-3-4
+:c-0-3-4 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-3 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-0-3-5
+:c-0-3-5 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-0-3 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-0-0
+:c-1-0-0 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-0 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-0-1
+:c-1-0-1 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-0 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-0-2
+:c-1-0-2 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-0 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-0-3
+:c-1-0-3 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-0 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-0-4
+:c-1-0-4 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-0 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-0-5
+:c-1-0-5 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-0 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-1-0
+:c-1-1-0 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-1 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-1-1
+:c-1-1-1 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-1 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-1-2
+:c-1-1-2 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-1 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-1-3
+:c-1-1-3 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-1 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-1-4
+:c-1-1-4 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-1 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-1-5
+:c-1-1-5 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-1 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-2-0
+:c-1-2-0 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-2 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-2-1
+:c-1-2-1 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-2 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-2-2
+:c-1-2-2 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-2 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-2-3
+:c-1-2-3 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-2 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-2-4
+:c-1-2-4 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-2 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-2-5
+:c-1-2-5 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-2 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-3-0
+:c-1-3-0 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-3 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-3-1
+:c-1-3-1 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-3 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-3-2
+:c-1-3-2 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-3 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-3-3
+:c-1-3-3 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-3 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-3-4
+:c-1-3-4 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-3 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#c-1-3-5
+:c-1-3-5 rdf:type owl:NamedIndividual ,
+                  :UsageUnit ;
+         :in :storey-1-3 ;
+         :totalGrossFloorArea 8.74 .
+
+
+###  http://test#external_staircase_main
+:external_staircase_main rdf:type owl:NamedIndividual ,
+                                  :ExternalStaircase ;
+                         :connects :storey-0-0 ,
+                                   :storey-0-1 ,
+                                   :storey-0-2 ,
+                                   :storey-0-3 ,
+                                   :storey-1-0 ,
+                                   :storey-1-1 ,
+                                   :storey-1-2 ,
+                                   :storey-1-3 .
+
+
+###  http://test#necessary_staircase1
+:necessary_staircase1 rdf:type owl:NamedIndividual ,
+                               :NecessaryStaircase ,
+                               [ rdf:type owl:Class ;
+                                 owl:complementOf :ExternalStaircase
+                               ] ;
+                      :connects :storey1 ,
+                                :storey2 ;
+                      :in :separate_stairwell1 .
+
+
+###  http://test#necessary_staircase_block0
+:necessary_staircase_block0 rdf:type owl:NamedIndividual ,
+                                     :NecessaryStaircase ;
+                            :connects :storey-0-0 ,
+                                      :storey-0-1 ,
+                                      :storey-0-2 ,
+                                      :storey-0-3 .
+
+
+###  http://test#necessary_staircase_block1
+:necessary_staircase_block1 rdf:type owl:NamedIndividual ,
+                                     :NecessaryStaircase ;
+                            :connects :storey-1-0 ,
+                                      :storey-1-1 ,
+                                      :storey-1-2 ,
+                                      :storey-1-3 .
+
+
+###  http://test#separate_stairwell1
+:separate_stairwell1 rdf:type owl:NamedIndividual ,
+                              :SeparateStairwell .
+
+
+###  http://test#storey-0-0
+:storey-0-0 rdf:type owl:NamedIndividual ,
+                     :Storey .
+
+
+###  http://test#storey-0-1
+:storey-0-1 rdf:type owl:NamedIndividual ,
+                     :Storey .
+
+
+###  http://test#storey-0-2
+:storey-0-2 rdf:type owl:NamedIndividual ,
+                     :Storey .
+
+
+###  http://test#storey-0-3
+:storey-0-3 rdf:type owl:NamedIndividual ,
+                     :Storey .
+
+
+###  http://test#storey-1-0
+:storey-1-0 rdf:type owl:NamedIndividual ,
+                     :Storey .
+
+
+###  http://test#storey-1-1
+:storey-1-1 rdf:type owl:NamedIndividual ,
+                     :Storey .
+
+
+###  http://test#storey-1-2
+:storey-1-2 rdf:type owl:NamedIndividual ,
+                     :Storey .
+
+
+###  http://test#storey-1-3
+:storey-1-3 rdf:type owl:NamedIndividual ,
+                     :Storey .
+
+
+###  http://test#storey1
+:storey1 rdf:type owl:NamedIndividual ,
+                  :Storey ;
+         :in :usage_unit1 .
+
+
+###  http://test#storey2
+:storey2 rdf:type owl:NamedIndividual ,
+                  :Storey ;
+         :in :usage_unit1 .
+
+
+###  http://test#usage_unit1
+:usage_unit1 rdf:type owl:NamedIndividual ,
+                      :UsageUnit ;
+             :totalGrossFloorArea 250.0 .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
