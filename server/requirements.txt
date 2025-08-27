@@ -1,0 +1,4 @@
+fastapi==0.116.1
+owlready2==0.48
+rdflib==7.1.4
+uvicorn==0.35.0
