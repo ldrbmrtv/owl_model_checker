@@ -1,0 +1,13 @@
+Task: Instantiate the OWL ontology from [onto] by creating OWL NamedIndividuals based on the data from [data], following the structure defined in [schema]
+
+Input files:
+-[onto] – Defines the ontology with predefined classes, relationships, and properties.
+-[data] – Contains the dataset to be instantiated.
+-[schema] – Specifies the structure and constraints of the dataset.
+Requirements:
+-The output must be a valid OWL ontology in Turtle (.ttl) format.
+-Preserve the original ontology and incorporate the newly created individuals.
+-Use only classes, relationships, and properties defined in onto.txt.
+-Include all relevant data from test-case-cleaned.json.
+Deliverable:
+-A .ttl file containing the ontology with instantiated individuals.

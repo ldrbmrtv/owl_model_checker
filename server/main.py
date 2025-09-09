@@ -22,15 +22,16 @@ def get_rules():
 
 def get_rule(id: str):
     return os.path.join(dir_path, rule_files, rules[id]['file'])
-    
-def check_model(id: str, file):
-    
-    file_path_ttl = os.path.join(dir_path, temp_data_ttl)
-    with open(file_path_ttl, 'wb') as file_saved:
-        file_saved.write(file.file.read())
 
+def check_model(response_path: str):
+    
+    #file_path_ttl = os.path.join(dir_path, temp_data_ttl)
+    #with open(file_path_ttl, 'wb') as file_saved:
+    #    #file_saved.write(file.file.read())
+    
     g = rdflib.Graph()
-    g.parse(file_path_ttl)
+    #g.parse(file_path_ttl)
+    g.parse(response_path)
     file_path_nt = os.path.join(dir_path, temp_data_nt)
     g.serialize(destination=file_path_nt, format='nt')
 

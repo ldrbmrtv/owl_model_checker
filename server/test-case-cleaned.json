@@ -1,0 +1,3382 @@
+{
+  "name": "Residential Block",
+  "description": "",
+  "types": [
+    {
+      "name": "Capsule",
+      "description": "An apartment capsule for one person. It has the entrance on the back and has the view to the front.",
+      "variant": "\\",
+      "unit": "m",
+      "ports": [
+        {
+          "id_": "",
+          "description": "The middle of the main entrance door of the upper entrance floor.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        }
+      ],
+      "qualities": [
+        {
+          "name": "entrance",
+          "value": "back",
+          "unit": ""
+        },
+        {
+          "name": "view",
+          "value": "front",
+          "unit": ""
+        },
+        {
+          "name": "length",
+          "value": "4.2",
+          "unit": "m"
+        },
+        {
+          "name": "width",
+          "value": "2.6",
+          "unit": "m"
+        },
+        {
+          "name": "heigth",
+          "value": "2.5",
+          "unit": "m"
+        },
+        {
+          "name": "window shape",
+          "value": "round",
+          "unit": ""
+        },
+        {
+          "name": "effective floor area",
+          "value": "8.74",
+          "unit": "m²"
+        },
+        {
+          "name": "construction cost",
+          "value": "82992",
+          "unit": "€"
+        },
+        {
+          "name": "heating energy demand",
+          "value": "393",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "cooling energy demand",
+          "value": "262",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "technical equipment energy demand",
+          "value": "262",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "income",
+          "value": "13104",
+          "unit": "€/a"
+        },
+        {
+          "name": "maintenance expenses",
+          "value": "1048",
+          "unit": "€/a"
+        },
+        {
+          "name": "construction global warming potential",
+          "value": "8736.01",
+          "unit": "kgCO2e"
+        }
+      ]
+    },
+    {
+      "name": "Capsule",
+      "description": "An apartment capsule for one person. It has the entrance on the back and has the view to the front. It is mirrored compared to the normal one.",
+      "variant": "/",
+      "unit": "m",
+      "ports": [
+        {
+          "id_": "",
+          "description": "The middle of the main entrance door of the upper entrance floor.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        }
+      ],
+      "qualities": [
+        {
+          "name": "entrance",
+          "value": "back",
+          "unit": ""
+        },
+        {
+          "name": "view",
+          "value": "front",
+          "unit": ""
+        },
+        {
+          "name": "length",
+          "value": "4.2",
+          "unit": "m"
+        },
+        {
+          "name": "width",
+          "value": "2.6",
+          "unit": "m"
+        },
+        {
+          "name": "heigth",
+          "value": "2.5",
+          "unit": "m"
+        },
+        {
+          "name": "window shape",
+          "value": "round",
+          "unit": ""
+        },
+        {
+          "name": "effective floor area",
+          "value": "8.74",
+          "unit": "m²"
+        },
+        {
+          "name": "construction cost",
+          "value": "82992",
+          "unit": "€"
+        },
+        {
+          "name": "heating energy demand",
+          "value": "393",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "cooling energy demand",
+          "value": "262",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "technical equipment energy demand",
+          "value": "262",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "income",
+          "value": "13104",
+          "unit": "€/a"
+        },
+        {
+          "name": "maintenance expenses",
+          "value": "1048",
+          "unit": "€/a"
+        },
+        {
+          "name": "construction global warming potential",
+          "value": "8736.01",
+          "unit": "kgCO2e"
+        },
+        {
+          "name": "mirrored",
+          "value": "",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "name": "Capsule",
+      "description": "An apartment capsule for one person. It has the entrance on the side and has the view to the front.",
+      "variant": "J",
+      "unit": "m",
+      "ports": [
+        {
+          "id_": "",
+          "description": "The middle of the main entrance door of the upper entrance floor.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        }
+      ],
+      "qualities": [
+        {
+          "name": "entrance",
+          "value": "side",
+          "unit": ""
+        },
+        {
+          "name": "view",
+          "value": "front",
+          "unit": ""
+        },
+        {
+          "name": "length",
+          "value": "4.2",
+          "unit": "m"
+        },
+        {
+          "name": "width",
+          "value": "2.6",
+          "unit": "m"
+        },
+        {
+          "name": "heigth",
+          "value": "2.5",
+          "unit": "m"
+        },
+        {
+          "name": "window shape",
+          "value": "round",
+          "unit": ""
+        },
+        {
+          "name": "effective floor area",
+          "value": "8.74",
+          "unit": "m²"
+        },
+        {
+          "name": "construction cost",
+          "value": "82992",
+          "unit": "€"
+        },
+        {
+          "name": "heating energy demand",
+          "value": "393",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "cooling energy demand",
+          "value": "262",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "technical equipment energy demand",
+          "value": "262",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "income",
+          "value": "13104",
+          "unit": "€/a"
+        },
+        {
+          "name": "maintenance expenses",
+          "value": "1048",
+          "unit": "€/a"
+        },
+        {
+          "name": "construction global warming potential",
+          "value": "8736.01",
+          "unit": "kgCO2e"
+        }
+      ]
+    },
+    {
+      "name": "Capsule",
+      "description": "An apartment capsule for one person. It has the entrance on the side and has the view to the front. It is mirrored compared to the normal one.",
+      "variant": "L",
+      "unit": "m",
+      "ports": [
+        {
+          "id_": "",
+          "description": "The middle of the main entrance door of the upper entrance floor.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        }
+      ],
+      "qualities": [
+        {
+          "name": "entrance",
+          "value": "side",
+          "unit": ""
+        },
+        {
+          "name": "view",
+          "value": "front",
+          "unit": ""
+        },
+        {
+          "name": "length",
+          "value": "4.2",
+          "unit": "m"
+        },
+        {
+          "name": "width",
+          "value": "2.6",
+          "unit": "m"
+        },
+        {
+          "name": "heigth",
+          "value": "2.5",
+          "unit": "m"
+        },
+        {
+          "name": "window shape",
+          "value": "round",
+          "unit": ""
+        },
+        {
+          "name": "effective floor area",
+          "value": "8.74",
+          "unit": "m²"
+        },
+        {
+          "name": "construction cost",
+          "value": "82992",
+          "unit": "€"
+        },
+        {
+          "name": "heating energy demand",
+          "value": "393",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "cooling energy demand",
+          "value": "262",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "technical equipment energy demand",
+          "value": "262",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "income",
+          "value": "13104",
+          "unit": "€/a"
+        },
+        {
+          "name": "maintenance expenses",
+          "value": "1048",
+          "unit": "€/a"
+        },
+        {
+          "name": "construction global warming potential",
+          "value": "8736.01",
+          "unit": "kgCO2e"
+        },
+        {
+          "name": "mirrored",
+          "value": "",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "name": "Tambour",
+      "description": "An efficient one storey tambour for a rectangular shaft core with an elevator in the center, the main platform on the north, and on the other corners sides platforms with two doors. There is a stair between \r\nevery platform. Hence the doors are spiraling around.",
+      "variant": "",
+      "unit": "m",
+      "ports": [
+        {
+          "id_": "b",
+          "description": "The top system center of the elevator.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "t",
+          "description": "The bottom system center of the elevator.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl0_d0",
+          "description": "The first door of the side plattform in the east facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl0_d1",
+          "description": "The second door of the side plattform in the north facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl0_d2",
+          "description": "The third door of the side plattform in the north facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl0_d3",
+          "description": "The fourth door of the side plattform in the west facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl1_d0",
+          "description": "The first door of the main plattform in the west facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl1_d1",
+          "description": "The second door of the main plattform in the south facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl2_d0",
+          "description": "The first door of the main plattform in the south facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl2_d1",
+          "description": "The second door of the main plattform in the east facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        }
+      ],
+      "qualities": [
+        {
+          "name": "width",
+          "value": "5.5",
+          "unit": "m"
+        },
+        {
+          "name": "storeys",
+          "value": "1",
+          "unit": ""
+        },
+        {
+          "name": "floor height",
+          "value": "2.75",
+          "unit": "m"
+        },
+        {
+          "name": "platform",
+          "value": "north",
+          "unit": ""
+        },
+        {
+          "name": "door width",
+          "value": "0.8",
+          "unit": "m"
+        },
+        {
+          "name": "door height",
+          "value": "2",
+          "unit": "m"
+        },
+        {
+          "name": "door offset",
+          "value": "1.15",
+          "unit": "m"
+        },
+        {
+          "name": "effective floor area",
+          "value": "24.21",
+          "unit": "m²"
+        },
+        {
+          "name": "construction cost",
+          "value": "217800",
+          "unit": "€"
+        },
+        {
+          "name": "heating energy demand",
+          "value": "484",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "cooling energy demand",
+          "value": "242",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "technical equipment energy demand",
+          "value": "484",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "maintenance expenses",
+          "value": "1016",
+          "unit": "€/a"
+        },
+        {
+          "name": "construction global warming potential",
+          "value": "1500",
+          "unit": "kgCO2e"
+        }
+      ]
+    },
+    {
+      "name": "Tambour",
+      "description": "An efficient one storey tambour for a rectangular shaft core with an elevator in the center, the main platform on the north, and on the other corners sides platforms with two doors. There is a stair between \r\nevery platform. Hence the doors are spiraling around.",
+      "variant": "First Storey",
+      "unit": "m",
+      "ports": [
+        {
+          "id_": "b",
+          "description": "The top system center of the elevator.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "t",
+          "description": "The bottom system center of the elevator.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl0_d0",
+          "description": "The first door of the side plattform in the east facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl0_d1",
+          "description": "The second door of the side plattform in the north facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl0_d2",
+          "description": "The third door of the side plattform in the north facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl0_d3",
+          "description": "The fourth door of the side plattform in the west facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl1_d0",
+          "description": "The first door of the main plattform in the west facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl1_d1",
+          "description": "The second door of the main plattform in the south facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl2_d0",
+          "description": "The first door of the main plattform in the south facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl2_d1",
+          "description": "The second door of the main plattform in the east facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        }
+      ],
+      "qualities": [
+        {
+          "name": "width",
+          "value": "5.5",
+          "unit": "m"
+        },
+        {
+          "name": "storeys",
+          "value": "1",
+          "unit": ""
+        },
+        {
+          "name": "floor height",
+          "value": "2.75",
+          "unit": "m"
+        },
+        {
+          "name": "platform",
+          "value": "north",
+          "unit": ""
+        },
+        {
+          "name": "door width",
+          "value": "0.8",
+          "unit": "m"
+        },
+        {
+          "name": "door height",
+          "value": "2",
+          "unit": "m"
+        },
+        {
+          "name": "door offset",
+          "value": "1.15",
+          "unit": "m"
+        },
+        {
+          "name": "effective floor area",
+          "value": "24.21",
+          "unit": "m²"
+        },
+        {
+          "name": "construction cost",
+          "value": "217800",
+          "unit": "€"
+        },
+        {
+          "name": "heating energy demand",
+          "value": "484",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "cooling energy demand",
+          "value": "242",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "technical equipment energy demand",
+          "value": "484",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "maintenance expenses",
+          "value": "1016",
+          "unit": "€/a"
+        },
+        {
+          "name": "construction global warming potential",
+          "value": "1500",
+          "unit": "kgCO2e"
+        }
+      ]
+    },
+    {
+      "name": "Tambour",
+      "description": "An efficient one storey tambour for a rectangular shaft core with an elevator in the center, the main platform on the north, and on the other corners sides platforms with two doors. There is a stair between \r\nevery platform. Hence the doors are spiraling around.",
+      "variant": "Last Storey",
+      "unit": "m",
+      "ports": [
+        {
+          "id_": "b",
+          "description": "The top system center of the elevator.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "t",
+          "description": "The bottom system center of the elevator.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl0_d0",
+          "description": "The first door of the side plattform in the east facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl0_d1",
+          "description": "The second door of the side plattform in the north facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl0_d2",
+          "description": "The third door of the side plattform in the north facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl0_d3",
+          "description": "The fourth door of the side plattform in the west facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl1_d0",
+          "description": "The first door of the main plattform in the west facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl1_d1",
+          "description": "The second door of the main plattform in the south facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl2_d0",
+          "description": "The first door of the main plattform in the south facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "sl2_d1",
+          "description": "The second door of the main plattform in the east facade.",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        }
+      ],
+      "qualities": [
+        {
+          "name": "width",
+          "value": "5.5",
+          "unit": "m"
+        },
+        {
+          "name": "storeys",
+          "value": "1",
+          "unit": ""
+        },
+        {
+          "name": "floor height",
+          "value": "2.75",
+          "unit": "m"
+        },
+        {
+          "name": "platform",
+          "value": "north",
+          "unit": ""
+        },
+        {
+          "name": "door width",
+          "value": "0.8",
+          "unit": "m"
+        },
+        {
+          "name": "door height",
+          "value": "2",
+          "unit": "m"
+        },
+        {
+          "name": "door offset",
+          "value": "1.15",
+          "unit": "m"
+        },
+        {
+          "name": "effective floor area",
+          "value": "24.21",
+          "unit": "m²"
+        },
+        {
+          "name": "construction cost",
+          "value": "217800",
+          "unit": "€"
+        },
+        {
+          "name": "heating energy demand",
+          "value": "484",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "cooling energy demand",
+          "value": "242",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "technical equipment energy demand",
+          "value": "484",
+          "unit": "kWh/a"
+        },
+        {
+          "name": "maintenance expenses",
+          "value": "1016",
+          "unit": "€/a"
+        },
+        {
+          "name": "construction global warming potential",
+          "value": "1500",
+          "unit": "kgCO2e"
+        }
+      ]
+    },
+    {
+      "name": "External Stair",
+      "description": "An external stair with no platform on the beginning and a double-sized platform on the end.",
+      "variant": "Last Storey",
+      "unit": "m",
+      "ports": [
+        {
+          "id_": "s",
+          "description": "",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "p-d-0",
+          "description": "",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "p-d-1",
+          "description": "",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        }
+      ],
+      "qualities": []
+    },
+    {
+      "name": "External Stair",
+      "description": "An external stair with no platform on the beginning and a double-sized platform with an opening for another stair on the end.",
+      "variant": "",
+      "unit": "m",
+      "ports": [
+        {
+          "id_": "s",
+          "description": "",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "p-s",
+          "description": "",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "p-d-0",
+          "description": "",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        },
+        {
+          "id_": "p-d-1",
+          "description": "",
+          "family": "",
+          "compatibleFamilies": [],
+          "qualities": []
+        }
+      ],
+      "qualities": []
+    }
+  ],
+  "designs": [
+    {
+      "name": "Residential Complex",
+      "description": "A four storey residential complex with two blocks. A block is a usage unit which has a core and capsules around it. It uses a central external stair case for accessing the two blocks.",
+      "variant": "",
+      "view": "",
+      "unit": "m",
+      "pieces": [
+        {
+          "id_": "t-0-0",
+          "description": "",
+          "type": {
+            "name": "Tambour",
+            "variant": "First Storey"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "t-0-1",
+          "description": "",
+          "type": {
+            "name": "Tambour",
+            "variant": ""
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "t-0-2",
+          "description": "",
+          "type": {
+            "name": "Tambour",
+            "variant": ""
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "t-0-3",
+          "description": "",
+          "type": {
+            "name": "Tambour",
+            "variant": "Last Storey"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "t-1-0",
+          "description": "",
+          "type": {
+            "name": "Tambour",
+            "variant": "First Storey"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "t-1-1",
+          "description": "",
+          "type": {
+            "name": "Tambour",
+            "variant": ""
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "t-1-2",
+          "description": "",
+          "type": {
+            "name": "Tambour",
+            "variant": ""
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "t-1-3",
+          "description": "",
+          "type": {
+            "name": "Tambour",
+            "variant": "Last Storey"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "b-0",
+          "description": "",
+          "type": {
+            "name": "External Stair",
+            "variant": "First Storey"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "b-1",
+          "description": "",
+          "type": {
+            "name": "External Stair",
+            "variant": ""
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "b-2",
+          "description": "",
+          "type": {
+            "name": "External Stair",
+            "variant": ""
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "b-3",
+          "description": "",
+          "type": {
+            "name": "External Stair",
+            "variant": ""
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "b-4",
+          "description": "",
+          "type": {
+            "name": "External Stair",
+            "variant": ""
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "b-5",
+          "description": "",
+          "type": {
+            "name": "External Stair",
+            "variant": ""
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "b-6",
+          "description": "",
+          "type": {
+            "name": "External Stair",
+            "variant": ""
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "b-7",
+          "description": "",
+          "type": {
+            "name": "External Stair",
+            "variant": "Last Storey"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-0-0",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "s"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-0-1",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "/"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-0-2",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "\\"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-0-3",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "/"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-0-4",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "\\"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-0-5",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "z"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-1-0",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "J"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-1-1",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "/"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-1-2",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "s"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-1-3",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "z"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-1-4",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "\\"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-1-5",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "z"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-2-0",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "s"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-2-1",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "/"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-2-2",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "\\"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-2-3",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "z"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-2-4",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "s"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-2-5",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "/"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-3-0",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "\\"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-3-1",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "z"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-3-2",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "s"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-3-3",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "z"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-3-4",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "\\"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-0-3-5",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "z"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-0-0",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "/"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-0-1",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "s"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-0-2",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "/"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-0-3",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "s"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-0-4",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "/"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-0-5",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "s"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-1-0",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "/"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-1-1",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "\\"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-1-2",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "z"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-1-3",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "\\"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-1-4",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "z"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-1-5",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "s"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-2-0",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "z"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-2-1",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "s"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-2-2",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "/"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-2-3",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "s"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-2-4",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "/"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-2-5",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "s"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-3-0",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "z"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-3-1",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "\\"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-3-2",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "/"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-3-3",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "\\"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-3-4",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "z"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        },
+        {
+          "id_": "c-1-3-5",
+          "description": "",
+          "type": {
+            "name": "Capsule with Balcony",
+            "variant": "s"
+          },
+          "plane": null,
+          "center": null,
+          "qualities": []
+        }
+      ],
+      "connections": [
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-0"
+            },
+            "port": {
+              "id_": "t"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "t-0-1"
+            },
+            "port": {
+              "id_": "b"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-1"
+            },
+            "port": {
+              "id_": "t"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "t-0-2"
+            },
+            "port": {
+              "id_": "b"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-2"
+            },
+            "port": {
+              "id_": "t"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "t-0-3"
+            },
+            "port": {
+              "id_": "b"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-0"
+            },
+            "port": {
+              "id_": "sl1_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "b-0"
+            },
+            "port": {
+              "id_": "p-d-1"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "b-0"
+            },
+            "port": {
+              "id_": "p-s"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "b-1"
+            },
+            "port": {
+              "id_": "s"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "b-1"
+            },
+            "port": {
+              "id_": "p-d-0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "t-1-0"
+            },
+            "port": {
+              "id_": "sl2_d1"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-1"
+            },
+            "port": {
+              "id_": "sl1_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "b-2"
+            },
+            "port": {
+              "id_": "p-d-1"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "b-2"
+            },
+            "port": {
+              "id_": "p-s"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "b-3"
+            },
+            "port": {
+              "id_": "s"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "b-3"
+            },
+            "port": {
+              "id_": "p-d-0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "t-1-1"
+            },
+            "port": {
+              "id_": "sl2_d1"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-2"
+            },
+            "port": {
+              "id_": "sl1_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "b-4"
+            },
+            "port": {
+              "id_": "p-d-1"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "b-4"
+            },
+            "port": {
+              "id_": "p-s"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "b-5"
+            },
+            "port": {
+              "id_": "s"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "b-5"
+            },
+            "port": {
+              "id_": "p-d-0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "t-1-2"
+            },
+            "port": {
+              "id_": "sl2_d1"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-3"
+            },
+            "port": {
+              "id_": "sl1_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "b-6"
+            },
+            "port": {
+              "id_": "p-d-1"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "b-6"
+            },
+            "port": {
+              "id_": "p-s"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "b-7"
+            },
+            "port": {
+              "id_": "s"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "b-7"
+            },
+            "port": {
+              "id_": "p-d-0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "t-1-3"
+            },
+            "port": {
+              "id_": "sl2_d1"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-0"
+            },
+            "port": {
+              "id_": "t"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "t-1-1"
+            },
+            "port": {
+              "id_": "b"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-1"
+            },
+            "port": {
+              "id_": "t"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "t-1-2"
+            },
+            "port": {
+              "id_": "b"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-2"
+            },
+            "port": {
+              "id_": "t"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "t-1-3"
+            },
+            "port": {
+              "id_": "b"
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-0"
+            },
+            "port": {
+              "id_": "sl0_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-0-0"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-0"
+            },
+            "port": {
+              "id_": "sl0_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-0-1"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-0"
+            },
+            "port": {
+              "id_": "sl0_d2"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-0-2"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-0"
+            },
+            "port": {
+              "id_": "sl1_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-0-3"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-0"
+            },
+            "port": {
+              "id_": "sl2_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-0-4"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-0"
+            },
+            "port": {
+              "id_": "sl2_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-0-5"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-1"
+            },
+            "port": {
+              "id_": "sl0_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-1-0"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-1"
+            },
+            "port": {
+              "id_": "sl0_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-1-1"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-1"
+            },
+            "port": {
+              "id_": "sl0_d2"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-1-2"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-1"
+            },
+            "port": {
+              "id_": "sl1_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-1-3"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-1"
+            },
+            "port": {
+              "id_": "sl2_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-1-4"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-1"
+            },
+            "port": {
+              "id_": "sl2_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-1-5"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-2"
+            },
+            "port": {
+              "id_": "sl0_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-2-0"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-2"
+            },
+            "port": {
+              "id_": "sl0_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-2-1"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-2"
+            },
+            "port": {
+              "id_": "sl0_d2"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-2-2"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-2"
+            },
+            "port": {
+              "id_": "sl1_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-2-3"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-2"
+            },
+            "port": {
+              "id_": "sl2_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-2-4"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-2"
+            },
+            "port": {
+              "id_": "sl2_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-2-5"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-3"
+            },
+            "port": {
+              "id_": "sl0_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-3-0"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-3"
+            },
+            "port": {
+              "id_": "sl0_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-3-1"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-3"
+            },
+            "port": {
+              "id_": "sl0_d2"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-3-2"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-3"
+            },
+            "port": {
+              "id_": "sl1_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-3-3"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-3"
+            },
+            "port": {
+              "id_": "sl2_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-3-4"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-0-3"
+            },
+            "port": {
+              "id_": "sl2_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-0-3-5"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-0"
+            },
+            "port": {
+              "id_": "sl0_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-0-0"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-0"
+            },
+            "port": {
+              "id_": "sl0_d2"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-0-1"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-0"
+            },
+            "port": {
+              "id_": "sl0_d3"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-0-2"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-0"
+            },
+            "port": {
+              "id_": "sl1_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-0-3"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-0"
+            },
+            "port": {
+              "id_": "sl1_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-0-4"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-0"
+            },
+            "port": {
+              "id_": "sl2_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-0-5"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-1"
+            },
+            "port": {
+              "id_": "sl0_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-1-0"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-1"
+            },
+            "port": {
+              "id_": "sl0_d2"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-1-1"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-1"
+            },
+            "port": {
+              "id_": "sl0_d3"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-1-2"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-1"
+            },
+            "port": {
+              "id_": "sl1_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-1-3"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-1"
+            },
+            "port": {
+              "id_": "sl1_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-1-4"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-1"
+            },
+            "port": {
+              "id_": "sl2_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-1-5"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-2"
+            },
+            "port": {
+              "id_": "sl0_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-2-0"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-2"
+            },
+            "port": {
+              "id_": "sl0_d2"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-2-1"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-2"
+            },
+            "port": {
+              "id_": "sl0_d3"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-2-2"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-2"
+            },
+            "port": {
+              "id_": "sl1_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-2-3"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-2"
+            },
+            "port": {
+              "id_": "sl1_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-2-4"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-2"
+            },
+            "port": {
+              "id_": "sl2_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-2-5"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-3"
+            },
+            "port": {
+              "id_": "sl0_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-3-0"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-3"
+            },
+            "port": {
+              "id_": "sl0_d2"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-3-1"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-3"
+            },
+            "port": {
+              "id_": "sl0_d3"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-3-2"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-3"
+            },
+            "port": {
+              "id_": "sl1_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-3-3"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-3"
+            },
+            "port": {
+              "id_": "sl1_d1"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-3-4"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        },
+        {
+          "description": "",
+          "gap": 0,
+          "shift": 0,
+          "raise_": 0,
+          "rotation": 0,
+          "turn": 0,
+          "tilt": 0,
+          "x": 0,
+          "y": 1,
+          "connected": {
+            "piece": {
+              "id_": "t-1-3"
+            },
+            "port": {
+              "id_": "sl2_d0"
+            }
+          },
+          "connecting": {
+            "piece": {
+              "id_": "c-1-3-5"
+            },
+            "port": {
+              "id_": ""
+            }
+          }
+        }
+      ],
+      "qualities": []
+    }
+  ],
+  "qualities": []
+}
