@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ids:ids xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd" xmlns:ids="http://standards.buildingsmart.org/IDS">
+	<ids:info>
+		<ids:title>Residential Block</ids:title>
+		<ids:description></ids:description>
+		<!-- Creation and update dates were not explicitly provided in the source for IDS format -->
+		<!-- Authors were not provided in the source -->
+	</ids:info>
+	<ids:specifications>
+		<!-- The following specification is retained from the provided ids_test.txt template -->
+		<ids:specification ifcVersion="IFC4X3_ADD2" name="Structural safety" instructions="Beams must be assessed for security concerns">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IFCBEAM</ids:simpleValue>
+					</ids:name>
+				</ids:entity>
+				<ids:material>
+					<ids:value>
+						<ids:simpleValue>Aerated Concrete</ids:simpleValue>
+					</ids:value>
+				</ids:material>
+				<ids:material>
+					<ids:value>
+						<ids:simpleValue>Steel</ids:simpleValue>
+					</ids:value>
+				</ids:material>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_ConcreteElementGeneral</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>ExposureClass</ids:simpleValue>
+					</ids:baseName>
+				</ids:property>
+			</ids:requirements>
+		</ids:specification>
+
+		<!-- Specifications translated from JSON "types" -->
+		<ids:specification ifcVersion="IFC4" name="Capsule_var_BACKSLASH" instructions="An apartment capsule for one person. It has the entrance on the back and has the view to the front.">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IFCSPACE</ids:simpleValue>
+					</ids:name>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeName</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>Capsule</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeVariant</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>\</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>entrance</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>back</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>view</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>front</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>length</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>4.2</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>width</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2.6</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>heigth</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2.5</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>window shape</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>round</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m²">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>effective floor area</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>8.74</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction cost</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>82992</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>heating energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>393</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>cooling energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>262</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>technical equipment energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>262</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>income</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>13104</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>maintenance expenses</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1048</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kgCO2e">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction global warming potential</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>8736.01</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+			</ids:requirements>
+		</ids:specification>
+
+		<ids:specification ifcVersion="IFC4" name="Capsule_var_SLASH" instructions="An apartment capsule for one person. It has the entrance on the back and has the view to the front. It is mirrored compared to the normal one.">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IFCSPACE</ids:simpleValue>
+					</ids:name>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeName</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>Capsule</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeVariant</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>/</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>entrance</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>back</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>view</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>front</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>length</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>4.2</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>width</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2.6</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>heigth</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2.5</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>window shape</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>round</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m²">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>effective floor area</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>8.74</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction cost</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>82992</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>heating energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>393</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>cooling energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>262</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>technical equipment energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>262</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>income</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>13104</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>maintenance expenses</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1048</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kgCO2e">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction global warming potential</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>8736.01</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>mirrored</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue></ids:simpleValue>
+					</ids:value>
+				</ids:property>
+			</ids:requirements>
+		</ids:specification>
+
+		<ids:specification ifcVersion="IFC4" name="Capsule_var_J" instructions="An apartment capsule for one person. It has the entrance on the side and has the view to the front.">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IFCSPACE</ids:simpleValue>
+					</ids:name>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeName</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>Capsule</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeVariant</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>J</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>entrance</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>side</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>view</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>front</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>length</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>4.2</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>width</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2.6</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>heigth</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2.5</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>window shape</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>round</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m²">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>effective floor area</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>8.74</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction cost</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>82992</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>heating energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>393</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>cooling energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>262</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>technical equipment energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>262</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>income</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>13104</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>maintenance expenses</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1048</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kgCO2e">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction global warming potential</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>8736.01</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+			</ids:requirements>
+		</ids:specification>
+
+		<ids:specification ifcVersion="IFC4" name="Capsule_var_L" instructions="An apartment capsule for one person. It has the entrance on the side and has the view to the front. It is mirrored compared to the normal one.">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IFCSPACE</ids:simpleValue>
+					</ids:name>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeName</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>Capsule</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeVariant</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>L</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>entrance</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>side</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>view</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>front</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>length</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>4.2</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>width</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2.6</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>heigth</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2.5</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>window shape</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>round</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m²">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>effective floor area</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>8.74</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction cost</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>82992</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>heating energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>393</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>cooling energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>262</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>technical equipment energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>262</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>income</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>13104</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>maintenance expenses</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1048</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kgCO2e">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction global warming potential</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>8736.01</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>mirrored</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue></ids:simpleValue>
+					</ids:value>
+				</ids:property>
+			</ids:requirements>
+		</ids:specification>
+
+		<ids:specification ifcVersion="IFC4" name="Tambour_var_EMPTY" instructions="An efficient one storey tambour for a rectangular shaft core with an elevator in the center, the main platform on the north, and on the other corners sides platforms with two doors. There is a stair between &#xD;&#xA;every platform. Hence the doors are spiraling around.">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IFCBUILDINGELEMENTPROXY</ids:simpleValue>
+					</ids:name>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeName</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>Tambour</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeVariant</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue></ids:simpleValue>
+						</ids:value>
+					</ids:property>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>width</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>5.5</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCINTEGER">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>storeys</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>floor height</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2.75</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>platform</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>north</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>door width</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>0.8</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>door height</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>door offset</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1.15</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m²">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>effective floor area</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>24.21</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction cost</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>217800</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>heating energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>484</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>cooling energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>242</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>technical equipment energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>484</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>maintenance expenses</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1016</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kgCO2e">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction global warming potential</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1500</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+			</ids:requirements>
+		</ids:specification>
+
+		<ids:specification ifcVersion="IFC4" name="Tambour_var_FirstStorey" instructions="An efficient one storey tambour for a rectangular shaft core with an elevator in the center, the main platform on the north, and on the other corners sides platforms with two doors. There is a stair between &#xD;&#xA;every platform. Hence the doors are spiraling around.">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IFCBUILDINGELEMENTPROXY</ids:simpleValue>
+					</ids:name>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeName</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>Tambour</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeVariant</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>First Storey</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>width</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>5.5</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCINTEGER">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>storeys</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>floor height</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2.75</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>platform</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>north</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>door width</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>0.8</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>door height</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>door offset</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1.15</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m²">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>effective floor area</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>24.21</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction cost</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>217800</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>heating energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>484</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>cooling energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>242</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>technical equipment energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>484</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>maintenance expenses</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1016</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kgCO2e">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction global warming potential</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1500</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+			</ids:requirements>
+		</ids:specification>
+
+		<ids:specification ifcVersion="IFC4" name="Tambour_var_LastStorey" instructions="An efficient one storey tambour for a rectangular shaft core with an elevator in the center, the main platform on the north, and on the other corners sides platforms with two doors. There is a stair between &#xD;&#xA;every platform. Hence the doors are spiraling around.">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IFCBUILDINGELEMENTPROXY</ids:simpleValue>
+					</ids:name>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeName</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>Tambour</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeVariant</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>Last Storey</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>width</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>5.5</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCINTEGER">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>storeys</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>floor height</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2.75</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCLABEL">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>platform</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>north</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>door width</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>0.8</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>door height</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>2</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>door offset</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1.15</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="m²">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>effective floor area</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>24.21</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction cost</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>217800</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>heating energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>484</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>cooling energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>242</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kWh/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>technical equipment energy demand</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>484</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="€/a">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>maintenance expenses</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1016</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+				<ids:property dataType="IFCREAL" unit="kgCO2e">
+					<ids:propertySet>
+						<ids:simpleValue>Pset_BimKitQualities</ids:simpleValue>
+					</ids:propertySet>
+					<ids:baseName>
+						<ids:simpleValue>construction global warming potential</ids:simpleValue>
+					</ids:baseName>
+					<ids:value>
+						<ids:simpleValue>1500</ids:simpleValue>
+					</ids:value>
+				</ids:property>
+			</ids:requirements>
+		</ids:specification>
+
+		<ids:specification ifcVersion="IFC4" name="ExternalStair_var_LastStorey" instructions="An external stair with no platform on the beginning and a double-sized platform on the end.">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IFCSTAIR</ids:simpleValue>
+					</ids:name>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeName</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>External Stair</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeVariant</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>Last Storey</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<!-- Qualities for External Stair Last Storey are empty in source JSON -->
+			</ids:requirements>
+		</ids:specification>
+
+		<ids:specification ifcVersion="IFC4" name="ExternalStair_var_EMPTY" instructions="An external stair with no platform on the beginning and a double-sized platform with an opening for another stair on the end.">
+			<ids:applicability minOccurs="1" maxOccurs="unbounded">
+				<ids:entity>
+					<ids:name>
+						<ids:simpleValue>IFCSTAIR</ids:simpleValue>
+					</ids:name>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeName</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue>External Stair</ids:simpleValue>
+						</ids:value>
+					</ids:property>
+					<ids:property dataType="IFCLABEL">
+						<ids:propertySet>
+							<ids:simpleValue>Pset_BimKitType</ids:simpleValue>
+						</ids:propertySet>
+						<ids:baseName>
+							<ids:simpleValue>TypeVariant</ids:simpleValue>
+						</ids:baseName>
+						<ids:value>
+							<ids:simpleValue></ids:simpleValue>
+						</ids:value>
+					</ids:property>
+				</ids:entity>
+			</ids:applicability>
+			<ids:requirements>
+				<!-- Qualities for External Stair are empty in source JSON -->
+			</ids:requirements>
+		</ids:specification>
+
+	</ids:specifications>
+</ids:ids>

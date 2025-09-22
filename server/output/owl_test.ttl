@@ -1,0 +1,348 @@
+@prefix : <http://test/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix test: <http://test#> .
+@base <http://test/> .
+
+<http://test> rdf:type owl:Ontology .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  Pieces from "Residential Complex" design
+
+###  http://test#t-0-0
+<http://test#t-0-0> rdf:type test:EigenerTreppenraum ,
+                              test:Geschoss .
+
+###  http://test#t-0-1
+<http://test#t-0-1> rdf:type test:EigenerTreppenraum ,
+                              test:Geschoss .
+
+###  http://test#t-0-2
+<http://test#t-0-2> rdf:type test:EigenerTreppenraum ,
+                              test:Geschoss .
+
+###  http://test#t-0-3
+<http://test#t-0-3> rdf:type test:EigenerTreppenraum ,
+                              test:Geschoss .
+
+###  http://test#t-1-0
+<http://test#t-1-0> rdf:type test:EigenerTreppenraum ,
+                              test:Geschoss .
+
+###  http://test#t-1-1
+<http://test#t-1-1> rdf:type test:EigenerTreppenraum ,
+                              test:Geschoss .
+
+###  http://test#t-1-2
+<http://test#t-1-2> rdf:type test:EigenerTreppenraum ,
+                              test:Geschoss .
+
+###  http://test#t-1-3
+<http://test#t-1-3> rdf:type test:EigenerTreppenraum ,
+                              test:Geschoss .
+
+###  http://test#b-0
+<http://test#b-0> rdf:type test:Außentreppe ,
+                          test:NotwendigeTreppe .
+
+###  http://test#b-1
+<http://test#b-1> rdf:type test:Außentreppe ,
+                          test:NotwendigeTreppe .
+
+###  http://test#b-2
+<http://test#b-2> rdf:type test:Außentreppe ,
+                          test:NotwendigeTreppe .
+
+###  http://test#b-3
+<http://test#b-3> rdf:type test:Außentreppe ,
+                          test:NotwendigeTreppe .
+
+###  http://test#b-4
+<http://test#b-4> rdf:type test:Außentreppe ,
+                          test:NotwendigeTreppe .
+
+###  http://test#b-5
+<http://test#b-5> rdf:type test:Außentreppe ,
+                          test:NotwendigeTreppe .
+
+###  http://test#b-6
+<http://test#b-6> rdf:type test:Außentreppe ,
+                          test:NotwendigeTreppe .
+
+###  http://test#b-7
+<http://test#b-7> rdf:type test:Außentreppe ,
+                          test:NotwendigeTreppe .
+
+###  http://test#c-0-0-0
+<http://test#c-0-0-0> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-0-1
+<http://test#c-0-0-1> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-0-2
+<http://test#c-0-0-2> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-0-3
+<http://test#c-0-0-3> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-0-4
+<http://test#c-0-0-4> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-0-5
+<http://test#c-0-0-5> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-1-0
+<http://test#c-0-1-0> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-1-1
+<http://test#c-0-1-1> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-1-2
+<http://test#c-0-1-2> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-1-3
+<http://test#c-0-1-3> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-1-4
+<http://test#c-0-1-4> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-1-5
+<http://test#c-0-1-5> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-2-0
+<http://test#c-0-2-0> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-2-1
+<http://test#c-0-2-1> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-2-2
+<http://test#c-0-2-2> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-2-3
+<http://test#c-0-2-3> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-2-4
+<http://test#c-0-2-4> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-2-5
+<http://test#c-0-2-5> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-3-0
+<http://test#c-0-3-0> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-3-1
+<http://test#c-0-3-1> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-3-2
+<http://test#c-0-3-2> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-3-3
+<http://test#c-0-3-3> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-3-4
+<http://test#c-0-3-4> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-0-3-5
+<http://test#c-0-3-5> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-0-0
+<http://test#c-1-0-0> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-0-1
+<http://test#c-1-0-1> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-0-2
+<http://test#c-1-0-2> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-0-3
+<http://test#c-1-0-3> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-0-4
+<http://test#c-1-0-4> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-0-5
+<http://test#c-1-0-5> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-1-0
+<http://test#c-1-1-0> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-1-1
+<http://test#c-1-1-1> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-1-2
+<http://test#c-1-1-2> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-1-3
+<http://test#c-1-1-3> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-1-4
+<http://test#c-1-1-4> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-1-5
+<http://test#c-1-1-5> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-2-0
+<http://test#c-1-2-0> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-2-1
+<http://test#c-1-2-1> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-2-2
+<http://test#c-1-2-2> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-2-3
+<http://test#c-1-2-3> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-2-4
+<http://test#c-1-2-4> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-2-5
+<http://test#c-1-2-5> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-3-0
+<http://test#c-1-3-0> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-3-1
+<http://test#c-1-3-1> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-3-2
+<http://test#c-1-3-2> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-3-3
+<http://test#c-1-3-3> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-3-4
+<http://test#c-1-3-4> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+###  http://test#c-1-3-5
+<http://test#c-1-3-5> rdf:type test:Nutzungseinheit ;
+                      test:bruttoGrundfläche "8.74"^^xsd:float .
+
+
+###  Connections from "Residential Complex" design
+
+###  Tambour to Tambour connections (vertical stack)
+<http://test#t-0-0> test:verbindet <http://test#t-0-1> .
+<http://test#t-0-1> test:verbindet <http://test#t-0-2> .
+<http://test#t-0-2> test:verbindet <http://test#t-0-3> .
+<http://test#t-1-0> test:verbindet <http://test#t-1-1> .
+<http://test#t-1-1> test:verbindet <http://test#t-1-2> .
+<http://test#t-1-2> test:verbindet <http://test#t-1-3> .
+
+###  External Stair to External Stair connections (vertical stack)
+<http://test#b-0> test:verbindet <http://test#b-1> .
+<http://test#b-2> test:verbindet <http://test#b-3> .
+<http://test#b-4> test:verbindet <http://test#b-5> .
+<http://test#b-6> test:verbindet <http://test#b-7> .
+
+###  Tambour to External Stair connections
+<http://test#t-0-0> test:verbindet <http://test#b-0> .
+<http://test#b-1> test:verbindet <http://test#t-1-0> .
+<http://test#t-0-1> test:verbindet <http://test#b-2> .
+<http://test#b-3> test:verbindet <http://test#t-1-1> .
+<http://test#t-0-2> test:verbindet <http://test#b-4> .
+<http://test#b-5> test:verbindet <http://test#t-1-2> .
+<http://test#t-0-3> test:verbindet <http://test#b-6> .
+<http://test#b-7> test:verbindet <http://test#t-1-3> .
+
+###  Tambour to Capsule connections (Usage Unit is in a Tambour/Geschoss)
+<http://test#c-0-0-0> test:in <http://test#t-0-0> .
+<http://test#c-0-0-1> test:in <http://test#t-0-0> .
+<http://test#c-0-0-2> test:in <http://test#t-0-0> .
+<http://test#c-0-0-3> test:in <http://test#t-0-0> .
+<http://test#c-0-0-4> test:in <http://test#t-0-0> .
+<http://test#c-0-0-5> test:in <http://test#t-0-0> .
+<http://test#c-0-1-0> test:in <http://test#t-0-1> .
+<http://test#c-0-1-1> test:in <http://test#t-0-1> .
+<http://test#c-0-1-2> test:in <http://test#t-0-1> .
+<http://test#c-0-1-3> test:in <http://test#t-0-1> .
+<http://test#c-0-1-4> test:in <http://test#t-0-1> .
+<http://test#c-0-1-5> test:in <http://test#t-0-1> .
+<http://test#c-0-2-0> test:in <http://test#t-0-2> .
+<http://test#c-0-2-1> test:in <http://test#t-0-2> .
+<http://test#c-0-2-2> test:in <http://test#t-0-2> .
+<http://test#c-0-2-3> test:in <http://test#t-0-2> .
+<http://test#c-0-2-4> test:in <http://test#t-0-2> .
+<http://test#c-0-2-5> test:in <http://test#t-0-2> .
+<http://test#c-0-3-0> test:in <http://test#t-0-3> .
+<http://test#c-0-3-1> test:in <http://test#t-0-3> .
+<http://test#c-0-3-2> test:in <http://test#t-0-3> .
+<http://test#c-0-3-3> test:in <http://test#t-0-3> .
+<http://test#c-0-3-4> test:in <http://test#t-0-3> .
+<http://test#c-0-3-5> test:in <http://test#t-0-3> .
+<http://test#c-1-0-0> test:in <http://test#t-1-0> .
+<http://test#c-1-0-1> test:in <http://test#t-1-0> .
+<http://test#c-1-0-2> test:in <http://test#t-1-0> .
+<http://test#c-1-0-3> test:in <http://test#t-1-0> .
+<http://test#c-1-0-4> test:in <http://test#t-1-0> .
+<http://test#c-1-0-5> test:in <http://test#t-1-0> .
+<http://test#c-1-1-0> test:in <http://test#t-1-1> .
+<http://test#c-1-1-1> test:in <http://test#t-1-1> .
+<http://test#c-1-1-2> test:in <http://test#t-1-1> .
+<http://test#c-1-1-3> test:in <http://test#t-1-1> .
+<http://test#c-1-1-4> test:in <http://test#t-1-1> .
+<http://test#c-1-1-5> test:in <http://test#t-1-1> .
+<http://test#c-1-2-0> test:in <http://test#t-1-2> .
+<http://test#c-1-2-1> test:in <http://test#t-1-2> .
+<http://test#c-1-2-2> test:in <http://test#t-1-2> .
+<http://test#c-1-2-3> test:in <http://test#t-1-2> .
+<http://test#c-1-2-4> test:in <http://test#t-1-2> .
+<http://test#c-1-2-5> test:in <http://test#t-1-2> .
+<http://test#c-1-3-0> test:in <http://test#t-1-3> .
+<http://test#c-1-3-1> test:in <http://test#t-1-3> .
+<http://test#c-1-3-2> test:in <http://test#t-1-3> .
+<http://test#c-1-3-3> test:in <http://test#t-1-3> .
+<http://test#c-1-3-4> test:in <http://test#t-1-3> .
+<http://test#c-1-3-5> test:in <http://test#t-1-3> .

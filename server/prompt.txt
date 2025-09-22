@@ -1,13 +1,13 @@
-Task: Instantiate the OWL ontology from [onto] by creating OWL NamedIndividuals based on the data from [data], following the structure defined in [schema]
+Task: Translate the data in [data] from the schema defined in [source_schema] into the schema defined in [target_schema].
 
 Input files:
--[onto] – Defines the ontology with predefined classes, relationships, and properties.
--[data] – Contains the dataset to be instantiated.
--[schema] – Specifies the structure and constraints of the dataset.
+- [source_schema] – Defines the original schema of the data.
+- [target_schema] – Defines the schema to which the data must be translated.
+- [data] – Contains the data to be trasnlated.
 Requirements:
--The output must be a valid OWL ontology in Turtle (.ttl) format.
--Preserve the original ontology and incorporate the newly created individuals.
--Use only classes, relationships, and properties defined in onto.txt.
--Include all relevant data from test-case-cleaned.json.
+- The output must be valid code according to the target schema from [target_schema].
+- Do not modify the target schema.
+- Use only classes and properties defined in the target schema, do not create new ones.
+- Include all relevant data from [data].
 Deliverable:
--A .ttl file containing the ontology with instantiated individuals.
+- Code containing the translated data.

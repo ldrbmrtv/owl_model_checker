@@ -18,7 +18,7 @@ with open(rule_base_path) as file:
 
 
 def get_rules():
-    return list(rules.keys())
+    return rules
 
 def get_rule(id: str):
     return os.path.join(dir_path, rule_files, rules[id]['file'])

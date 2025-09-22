@@ -1,5 +1,10 @@
 {
-	"test": {
-		"file": "test.txt"
+	"owl_test": {
+		"schema": "owl",
+		"file": "OWL_test.txt"
+	},
+	"ids_test": {
+		"schema": "ids",
+		"file": "IDS_StructuralSafety.txt"
 	}
 }
