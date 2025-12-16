@@ -1,4 +1,7 @@
-fastapi==0.116.1
-owlready2==0.48
-rdflib==7.1.4
-uvicorn==0.35.0
+fastapi==0.124.4
+owlapy==1.6.2
+owlready2==0.49
+protobuf==3.20.0
+python-dotenv==1.2.1
+rdflib==7.5.0
+uvicorn==0.38.0

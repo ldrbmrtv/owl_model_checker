@@ -14,7 +14,11 @@ async def api_get_rules():
 async def api_get_rule(id: str):
     return FileResponse(get_rule(id))
 
-@app.post('/api/rule/{id}')
+#@app.post('/api/rule/{id}')
+#async def api_check_model(id: str, file: UploadFile=File(...)):
+#    return check_model(id, file)
+
+@app.post('/api/check_model')
 async def api_check_model(id: str, file: UploadFile=File(...)):
     return check_model(id, file)
 

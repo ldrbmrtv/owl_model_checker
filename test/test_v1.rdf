@@ -1,0 +1,695 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://test#"
+     xml:base="http://test"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://test"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://test#connects -->
+
+    <owl:ObjectProperty rdf:about="http://test#connects">
+        <owl:inverseOf rdf:resource="http://test#isConnectedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://test#in -->
+
+    <owl:ObjectProperty rdf:about="http://test#in"/>
+    
+
+
+    <!-- http://test#isConnectedTo -->
+
+    <owl:ObjectProperty rdf:about="http://test#isConnectedTo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://test#totalGrossFloorArea -->
+
+    <owl:DatatypeProperty rdf:about="http://test#totalGrossFloorArea">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://test#BuildingClass1 -->
+
+    <owl:Class rdf:about="http://test#BuildingClass1"/>
+    
+
+
+    <!-- http://test#BuildingClass2 -->
+
+    <owl:Class rdf:about="http://test#BuildingClass2"/>
+    
+
+
+    <!-- http://test#EscapeRoute -->
+
+    <owl:Class rdf:about="http://test#EscapeRoute"/>
+    
+
+
+    <!-- http://test#ExternalStaircase -->
+
+    <owl:Class rdf:about="http://test#ExternalStaircase"/>
+    
+
+
+    <!-- http://test#MustBeLocatedInSeparateStairwell -->
+
+    <owl:Class rdf:about="http://test#MustBeLocatedInSeparateStairwell">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#in"/>
+                <owl:someValuesFrom rdf:resource="http://test#SeparateStairwell"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://test#NecessaryStaircase -->
+
+    <owl:Class rdf:about="http://test#NecessaryStaircase"/>
+    
+
+
+    <!-- http://test#NecessaryStaircaseInSeparateStairwell -->
+
+    <owl:Class rdf:about="http://test#NecessaryStaircaseInSeparateStairwell">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://test#ExternalStaircase"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://test#in"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://test#BuildingClass1"/>
+                                            <rdf:Description rdf:about="http://test#BuildingClass2"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://test#connects"/>
+                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                                <owl:onClass>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://test#Storey"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+                                                <owl:someValuesFrom rdf:resource="http://test#EscapeRoute"/>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://test#in"/>
+                                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                                <owl:onClass>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://test#UsageUnit"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="http://test#totalGrossFloorArea"/>
+                                                                <owl:someValuesFrom>
+                                                                    <rdfs:Datatype>
+                                                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                                                        <owl:withRestrictions rdf:parseType="Collection">
+                                                                            <rdf:Description>
+                                                                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</xsd:maxInclusive>
+                                                                            </rdf:Description>
+                                                                        </owl:withRestrictions>
+                                                                    </rdfs:Datatype>
+                                                                </owl:someValuesFrom>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:onClass>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:onClass>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://test#NecessaryStaircase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://test#NotCompliant -->
+
+    <owl:Class rdf:about="http://test#NotCompliant">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://test#NecessaryStaircaseInSeparateStairwell"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://test#MustBeLocatedInSeparateStairwell"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://test#SeparateStairwell -->
+
+    <owl:Class rdf:about="http://test#SeparateStairwell"/>
+    
+
+
+    <!-- http://test#Storey -->
+
+    <owl:Class rdf:about="http://test#Storey"/>
+    
+
+
+    <!-- http://test#UsageUnit -->
+
+    <owl:Class rdf:about="http://test#UsageUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://test#external_staircase_b -->
+
+    <owl:NamedIndividual rdf:about="http://test#external_staircase_b">
+        <rdf:type rdf:resource="http://test#EscapeRoute"/>
+        <rdf:type rdf:resource="http://test#ExternalStaircase"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#connects"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#storey_0"/>
+                            <rdf:Description rdf:about="http://test#storey_1"/>
+                            <rdf:Description rdf:about="http://test#storey_2"/>
+                            <rdf:Description rdf:about="http://test#storey_3"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#in"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <connects rdf:resource="http://test#storey_0"/>
+        <connects rdf:resource="http://test#storey_1"/>
+        <connects rdf:resource="http://test#storey_2"/>
+        <connects rdf:resource="http://test#storey_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test#necessary_staircase_0 -->
+
+    <owl:NamedIndividual rdf:about="http://test#necessary_staircase_0">
+        <rdf:type rdf:resource="http://test#NecessaryStaircase"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://test#ExternalStaircase"/>
+            </owl:Class>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#connects"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#storey_0"/>
+                            <rdf:Description rdf:about="http://test#storey_1"/>
+                            <rdf:Description rdf:about="http://test#storey_2"/>
+                            <rdf:Description rdf:about="http://test#storey_3"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#in"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <connects rdf:resource="http://test#storey_0"/>
+        <connects rdf:resource="http://test#storey_1"/>
+        <connects rdf:resource="http://test#storey_2"/>
+        <connects rdf:resource="http://test#storey_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test#necessary_staircase_1 -->
+
+    <owl:NamedIndividual rdf:about="http://test#necessary_staircase_1">
+        <rdf:type rdf:resource="http://test#NecessaryStaircase"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://test#ExternalStaircase"/>
+            </owl:Class>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#connects"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#storey_0"/>
+                            <rdf:Description rdf:about="http://test#storey_1"/>
+                            <rdf:Description rdf:about="http://test#storey_2"/>
+                            <rdf:Description rdf:about="http://test#storey_3"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#in"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#separate_stairwell_1"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <connects rdf:resource="http://test#storey_0"/>
+        <connects rdf:resource="http://test#storey_1"/>
+        <connects rdf:resource="http://test#storey_2"/>
+        <connects rdf:resource="http://test#storey_3"/>
+        <in rdf:resource="http://test#separate_stairwell_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test#separate_stairwell_0 -->
+
+    <owl:NamedIndividual rdf:about="http://test#separate_stairwell_0">
+        <rdf:type rdf:resource="http://test#SeparateStairwell"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#connects"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#in"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#necessary_staircase_0"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test#separate_stairwell_1 -->
+
+    <owl:NamedIndividual rdf:about="http://test#separate_stairwell_1">
+        <rdf:type rdf:resource="http://test#SeparateStairwell"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#connects"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#in"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#necessary_staircase_1"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test#storey_0 -->
+
+    <owl:NamedIndividual rdf:about="http://test#storey_0">
+        <rdf:type rdf:resource="http://test#Storey"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#connects"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#in"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#usage_unit_0"/>
+                            <rdf:Description rdf:about="http://test#usage_unit_1"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#external_staircase_b"/>
+                            <rdf:Description rdf:about="http://test#necessary_staircase_0"/>
+                            <rdf:Description rdf:about="http://test#necessary_staircase_1"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <in rdf:resource="http://test#usage_unit_0"/>
+        <in rdf:resource="http://test#usage_unit_1"/>
+        <isConnectedTo rdf:resource="http://test#external_staircase_b"/>
+        <isConnectedTo rdf:resource="http://test#necessary_staircase_0"/>
+        <isConnectedTo rdf:resource="http://test#necessary_staircase_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test#storey_1 -->
+
+    <owl:NamedIndividual rdf:about="http://test#storey_1">
+        <rdf:type rdf:resource="http://test#Storey"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#connects"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#in"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#usage_unit_0"/>
+                            <rdf:Description rdf:about="http://test#usage_unit_1"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#external_staircase_b"/>
+                            <rdf:Description rdf:about="http://test#necessary_staircase_0"/>
+                            <rdf:Description rdf:about="http://test#necessary_staircase_1"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <in rdf:resource="http://test#usage_unit_0"/>
+        <in rdf:resource="http://test#usage_unit_1"/>
+        <isConnectedTo rdf:resource="http://test#external_staircase_b"/>
+        <isConnectedTo rdf:resource="http://test#necessary_staircase_0"/>
+        <isConnectedTo rdf:resource="http://test#necessary_staircase_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test#storey_2 -->
+
+    <owl:NamedIndividual rdf:about="http://test#storey_2">
+        <rdf:type rdf:resource="http://test#Storey"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#connects"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#in"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#usage_unit_0"/>
+                            <rdf:Description rdf:about="http://test#usage_unit_1"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#external_staircase_b"/>
+                            <rdf:Description rdf:about="http://test#necessary_staircase_0"/>
+                            <rdf:Description rdf:about="http://test#necessary_staircase_1"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <in rdf:resource="http://test#usage_unit_0"/>
+        <in rdf:resource="http://test#usage_unit_1"/>
+        <isConnectedTo rdf:resource="http://test#external_staircase_b"/>
+        <isConnectedTo rdf:resource="http://test#necessary_staircase_0"/>
+        <isConnectedTo rdf:resource="http://test#necessary_staircase_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test#storey_3 -->
+
+    <owl:NamedIndividual rdf:about="http://test#storey_3">
+        <rdf:type rdf:resource="http://test#Storey"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#connects"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#in"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#usage_unit_0"/>
+                            <rdf:Description rdf:about="http://test#usage_unit_1"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#external_staircase_b"/>
+                            <rdf:Description rdf:about="http://test#necessary_staircase_0"/>
+                            <rdf:Description rdf:about="http://test#necessary_staircase_1"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <in rdf:resource="http://test#usage_unit_0"/>
+        <in rdf:resource="http://test#usage_unit_1"/>
+        <isConnectedTo rdf:resource="http://test#external_staircase_b"/>
+        <isConnectedTo rdf:resource="http://test#necessary_staircase_0"/>
+        <isConnectedTo rdf:resource="http://test#necessary_staircase_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test#usage_unit_0 -->
+
+    <owl:NamedIndividual rdf:about="http://test#usage_unit_0">
+        <rdf:type rdf:resource="http://test#UsageUnit"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#connects"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#in"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#storey_0"/>
+                            <rdf:Description rdf:about="http://test#storey_1"/>
+                            <rdf:Description rdf:about="http://test#storey_2"/>
+                            <rdf:Description rdf:about="http://test#storey_3"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <totalGrossFloorArea rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">209.76</totalGrossFloorArea>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://test#usage_unit_1 -->
+
+    <owl:NamedIndividual rdf:about="http://test#usage_unit_1">
+        <rdf:type rdf:resource="http://test#UsageUnit"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#connects"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#in"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://test#storey_0"/>
+                            <rdf:Description rdf:about="http://test#storey_1"/>
+                            <rdf:Description rdf:about="http://test#storey_2"/>
+                            <rdf:Description rdf:about="http://test#storey_3"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+        <totalGrossFloorArea rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">209.76</totalGrossFloorArea>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

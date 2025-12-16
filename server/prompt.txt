@@ -3,7 +3,7 @@ Task: Translate the data in [data] from the schema defined in [source_schema] in
 Input files:
 - [source_schema] – Defines the original schema of the data.
 - [target_schema] – Defines the schema to which the data must be translated.
-- [data] – Contains the data to be trasnlated.
+- [data] – Contains the data to be translated.
 Requirements:
 - The output must be valid code according to the target schema from [target_schema].
 - Do not modify the target schema.
