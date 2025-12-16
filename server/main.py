@@ -144,7 +144,7 @@ def check_model(response_path: str):
             return str(e)
 
 
-onto_path = 'C:/Users/baimu/Work/KIML/Explain/test_v1.rdf'
+onto_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), os.pardir)), 'test/', 'test_v1.rdf')
 res = check_model(onto_path)
 with open('test.json', 'w') as file:
     json.dump(res, file)

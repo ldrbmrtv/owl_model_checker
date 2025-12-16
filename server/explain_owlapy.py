@@ -62,9 +62,3 @@ class SyncReasonerJustifications(SyncReasoner):
         stopJVM()
         
         return justifications
-
-
-#onto_iri = "http://test#NotCompliant"
-#onto_path = 'C:/Users/baimu/Work/KIML/Explain/test_v1.rdf'
-#expl = get_explanation(onto_iri, onto_path)
-#print(expl)
