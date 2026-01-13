@@ -24,8 +24,7 @@ def get_rules():
 def get_rule(id: str):
     return os.path.join(dir_path, rule_files, rules[id]['file'])
 
-def check_model(response_path: str):
-    
+def get_onto(response_path: str):
     g = rdflib.Graph()
     g.parse(response_path)
     file_path_nt = os.path.join(dir_path, temp_data_nt)
@@ -35,6 +34,47 @@ def check_model(response_path: str):
     #for inst in onto.individuals():
     #    close_world(inst)
     onto.save(file_path_nt)
+    return onto
+
+def get_clauses(id: str):
+
+    onto_path = get_rule(id)
+    onto = get_onto(onto_path)
+
+    fail_class = onto['NotCompliant']
+    equivalent_to = fail_class.INDIRECT_equivalent_to[0]
+    
+    requirement = equivalent_to.is_a[1]
+    requirement = requirement.Class
+    #requirement = requirement.INDIRECT_equivalent_to[0]
+    requirement = {
+        'id': str(requirement).replace(f'{onto.name}.', ''),
+        'description': requirement.label[0],
+        'code': str(requirement.INDIRECT_equivalent_to[0]).replace(f'{onto.name}.', '')
+    }
+    
+    rationale = equivalent_to.is_a[0]
+    rationale = rationale.INDIRECT_equivalent_to[0].Classes
+    rationale = [{
+        'id': str(x).replace(f'{onto.name}.', ''),
+        'description': x.label[0],
+        'code': str(x.INDIRECT_equivalent_to[0]).replace(f'{onto.name}.', '')
+    } for x in rationale]
+
+    res = {
+        'id': id,
+        'rationale': rationale,
+        'requirement': requirement
+    }
+
+    onto.destroy(update_relation=True, update_is_a=True)
+
+    return res
+    
+
+def check_model(response_path: str):
+    
+    onto = get_onto(response_path)
     
     try:
         #log_file_path = os.path.join(dir_path, log_file)
@@ -59,6 +99,8 @@ def check_model(response_path: str):
             explanation = []
             for x in value[0]:
                 if 'Assertion' in x:
+
+                    #Formatting owlapy
                     x = x.replace(f'{onto_iri}#', '')
                     x = x.replace('<', '')
                     x = x.replace('>', '')
@@ -69,7 +111,8 @@ def check_model(response_path: str):
                         x = x.split(' ')
                         order = [1, 0, 2]
                         x = [x[i] for i in order]
-                        x = ' '.join(x)
+                        x[2] = x[2].replace('"', '')
+                        x[2] = x[2].replace('^^xsd:decimal', '')
                     if 'ClassAssertion' in x:
                         x = x.replace('ClassAssertion', '')
                         x = x[1:-1]
@@ -77,60 +120,42 @@ def check_model(response_path: str):
                             x = x.replace('AllValuesFrom', '')
                             x = x.rsplit(' ', 1)
                             x[0] = x[0][1:-1]
-                            if 'OneOf' in x[0]:
-                                x[0] = x[0].split(' OneOf')
-                                x[0][1] = x[0][1].replace(' ', ', ')
-                                x[0] = ' '.join(x[0])
-                            x = [x[1], x[0]]
-                            x = ' '.join(x)
+                            x = [x[1]] + x[0].split(' ', 1)
+                            if 'OneOf' in x[2]:
+                                x[2] = x[2].replace('OneOf', '')
+                                x[2] = x[2].replace('(', '')
+                                x[2] = x[2].replace(')', '')
+                                x[2] = x[2].split(' ')
                         if 'ComplementOf' in x:
-                            x = x.replace('ComplementOf', 'Not')
+                            x = x.replace('ComplementOf', '')
                             x = x.split(' ')
-                            x = [x[1], x[0]]
-                            x = ' '.join(x)
+                            x = [x[1], 'Not', x[0]]
                     explanation.append(x)
-                    explanation = sorted(explanation)
+                    #explanation = sorted(explanation)
+
+            #Grouping by subject
+            grouped = {}
+            for triple in explanation:
+                if grouped.get(triple[0]) == None:
+                    grouped[triple[0]] = {triple[1]: triple[2]}
+                else:
+                    grouped[triple[0]][triple[1]] = triple[2]
+            explanation = grouped
+
             explanations_owlapy[key] = explanation
 
-        fail_class = onto['NotCompliant']
-        individuals = fail_class.instances()
-        if len(individuals) > 0:
-            equivalent_to = fail_class.INDIRECT_equivalent_to[0]
-            
-            requirement = equivalent_to.is_a[1]
-            requirement = requirement.Class
-            requirement = requirement.INDIRECT_equivalent_to[0]
-            requirement = str(requirement).replace(f'{onto.name}.', '')
-            
-            rationale = equivalent_to.is_a[0]
-            rationale = rationale.INDIRECT_equivalent_to[0].Classes
-            rationale = [str(x).replace(f'{onto.name}.', '') for x in rationale]
-
-            explanations = []
-
-            for ind in individuals:
-                data = [str(x).replace(f'{onto.name}.', '') for x in ind.is_a]
-                data = list(set(data))
-                data.remove('NotCompliant')
-                explanations.append({
-                    'object': ind.name,
-                    'rationale': rationale,
-                    'requirement': requirement,
-                    'factually': explanations_owlapy[ind.name]
-                })
-
+        if len(explanations_owlapy) > 0:
             res = {
                 'valid': False,
-                'explanation': explanations
+                'explanation': explanations_owlapy
             }
-            onto.destroy(update_relation=True, update_is_a=True)    
-            return res
-        
-        res = {
-            'valid': True
-        }
-        onto.destroy(update_relation=True, update_is_a=True)
+        else:
+            res = {
+                'valid': True
+            }
+        onto.destroy(update_relation=True, update_is_a=True)    
         return res
+
     except Exception as e:
         if type(e).__name__ == 'OwlReadyInconsistentOntologyError':
             res = {
@@ -144,7 +169,11 @@ def check_model(response_path: str):
             return str(e)
 
 
-onto_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), os.pardir)), 'test/', 'test_v1.rdf')
-res = check_model(onto_path)
-with open('test.json', 'w') as file:
-    json.dump(res, file)
+clauses = get_clauses('owl_test_2')
+with open('clauses.json', 'w') as file:
+    json.dump(clauses, file)
+
+#onto_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), os.pardir)), 'test/', 'test_v1.rdf')
+#res = check_model(onto_path)
+#with open('test.json', 'w') as file:
+#    json.dump(res, file)

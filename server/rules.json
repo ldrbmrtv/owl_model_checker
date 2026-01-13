@@ -3,6 +3,14 @@
 		"schema": "owl",
 		"file": "OWL_test.txt"
 	},
+	"owl_test_1": {
+		"schema": "owl",
+		"file": "OWL_test_1.owl"
+	},
+	"owl_test_2": {
+		"schema": "owl",
+		"file": "OWL_test_2.owl"
+	},
 	"ids_test": {
 		"schema": "ids",
 		"file": "IDS_StructuralSafety.txt"
