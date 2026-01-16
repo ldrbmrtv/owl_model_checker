@@ -1,0 +1,45 @@
+{
+    "rules": {
+        "staircase-in-separate-stairwell": {
+            "status": "compliant",
+            "clauses": {
+                "not-external-staircase": {
+                    "status": "compliant"
+                },
+                "not-in-building-classes-1-and-2": {
+                    "status": "compliant"
+                },
+                "not-connecting-two-storeys-within-same-usage-unit-with-total-gross-floor-area-of-no-more-than-200-m²-if-different-escape-route-can-be-reached-on-each-storey": {
+                    "status": "violated"
+                }
+            }
+        },
+        "enough-buro-space": {
+            "status": "violated",
+            "clauses": {
+                ">300m²": {
+                    "actual": "255m²",
+                    "should": "300m²"
+                }
+            }
+        },
+        "building-height-limit": {
+            "status": "compliant",
+            "clauses": {
+                "<21m": {
+                    "status": "compliant",
+                    "actual": "20.5m"
+                }
+            }
+        },
+        "smoething-to-be-irrelevant": {
+            "status": "not-applicable",
+            "clauses": {
+                "<21m": {
+                    "status": "compliant",
+                    "actual": "20.5m"
+                }
+            }
+        }
+    }
+}

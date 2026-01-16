@@ -1,0 +1,35 @@
+[
+    {
+        "id": "staircase-located",
+        "description": "Must be located in a separate stairwell",
+        "clauses": [
+            {
+                "id": "not-external-staircase",
+                "description": "Not an external staircase",
+                "code": "Not(ExternalStaircase)"
+            },
+            {
+                "id": "not-in-building-classes-1-and-2",
+                "description": "Not in buildings of building classes 1 and 2",
+                "code": "Not(in.some(BuildingClass1 | BuildingClass2))"
+            }
+        ],
+        "measures": [
+            "change-building-class"
+        ]
+    },
+    {
+        "id": "enough-buro-space",
+        "description": "At least 300m² buro spaces.",
+        "measures": [
+            "increase-floor-area"
+        ]
+    },
+    {
+        "id": "building-height-limit",
+        "description": "The building height must be less than 21m.",
+        "measures": [
+            "remove-storey"
+        ]
+    }
+]

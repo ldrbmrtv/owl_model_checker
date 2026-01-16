@@ -1,0 +1,33 @@
+[
+    {
+        "id": "area-increase",
+        "description": "Increase the floor area",
+        "fixes": {
+            "semio": {
+                "tools": {
+                    "analyze": [
+                        "evaluate_quality"
+                    ],
+                    "change": [
+                        "add_piece",
+                        "change_piece_type",
+                        "update_type"
+                    ]
+                },
+                "skill": "Increase the ..."
+            }
+        },
+        "archicad": {
+            "tools": {
+                "analyze": [
+                    "get_zone_area"
+                ],
+                "change": [
+                    "move_wall",
+                    "stretch_wall"
+                ]
+            },
+            "skill": "Increase the ..."
+        }
+    }
+]
