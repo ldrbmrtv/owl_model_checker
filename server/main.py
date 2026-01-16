@@ -11,6 +11,8 @@ rule_files = 'rules/'
 rule_base = 'rules.json'
 temp_data_ttl = 'temp_data.ttl'
 temp_data_nt = 'temp_data.nt'
+temp_data_imported = 'temp_data_imported.owl'
+temp_classified = 'temp_classified.owl'
 log_file = 'temp_log.txt'
 
 rule_base_path = os.path.join(dir_path, rule_base)
@@ -21,8 +23,10 @@ with open(rule_base_path) as file:
 def get_rules():
     return rules
 
+
 def get_rule(id: str):
     return os.path.join(dir_path, rule_files, rules[id]['file'])
+
 
 def get_onto(response_path: str):
     g = rdflib.Graph()
@@ -35,6 +39,7 @@ def get_onto(response_path: str):
     #    close_world(inst)
     onto.save(file_path_nt)
     return onto
+
 
 def get_clauses(id: str):
 
@@ -70,29 +75,51 @@ def get_clauses(id: str):
     onto.destroy(update_relation=True, update_is_a=True)
 
     return res
-    
 
-def check_model(response_path: str):
+
+def copy_instances_rdflib(source_path, target_path):
+
+    onto_file = 'merged.owl'
+    source_onto = rdflib.Graph().parse(source_path)
+    target_onto = rdflib.Graph().parse(target_path)
+    merged = source_onto + target_onto   # union of triples
+    merged.serialize(temp_data_imported, format='xml')
+    return temp_data_imported
+
+
+def check_model(data_path: str, rule_path: str):
     
-    onto = get_onto(response_path)
-    
+    onto_path = copy_instances_rdflib(data_path, rule_path)
+
+    onto = get_onto(onto_path)    
+
     try:
         #log_file_path = os.path.join(dir_path, log_file)
         #sys.stdout = open(log_file_path, 'w')
         with onto:
-            #sync_reasoner_pellet(
-            #    infer_property_values = True,
-            #    infer_data_property_values = True,
-            #    debug=2)
-            sync_reasoner_pellet()
+            sync_reasoner_pellet(
+                infer_property_values = True,
+                infer_data_property_values = True,
+                debug=2)
+            #sync_reasoner_pellet()
+            onto.save(temp_classified)
+
+        classes = list(onto.classes())
+        for cl in classes:
+            if cl.name == 'NotCompliant':
+                fail_class_iri = cl.iri
+                break
+
         #sys.stdout.close()
         #with open(log_file_path) as file:
         #    log = file.read()
 
-        reasoner = SyncReasonerJustifications(ontology=response_path, reasoner="Openllet")
-        ontology_id = reasoner.ontology.get_ontology_id()
-        onto_iri = ontology_id._ontology_iri.str
-        fail_class_owlapy = OWLClass(f'{onto_iri}#NotCompliant')
+        reasoner = SyncReasonerJustifications(ontology=temp_classified, reasoner="Openllet")
+        #ontology_id = reasoner.ontology.get_ontology_id()
+        #onto_iri = ontology_id._ontology_iri.str
+        #fail_class_owlapy = OWLClass(f'{onto_iri}#NotCompliant')
+        fail_class_owlapy = OWLClass(fail_class_iri)
+        onto_iri = fail_class_owlapy.iri._namespace
         individuals_owlapy = reasoner.instances(fail_class_owlapy, direct=False)
         explanations_owlapy = reasoner.create_justifications(set(individuals_owlapy), fail_class_owlapy)
         for key, value in explanations_owlapy.items():
@@ -101,7 +128,7 @@ def check_model(response_path: str):
                 if 'Assertion' in x:
 
                     #Formatting owlapy
-                    x = x.replace(f'{onto_iri}#', '')
+                    x = x.replace(onto_iri, '')
                     x = x.replace('<', '')
                     x = x.replace('>', '')
                     x = x.replace('Object', '')
@@ -169,11 +196,12 @@ def check_model(response_path: str):
             return str(e)
 
 
-clauses = get_clauses('owl_test_2')
-with open('clauses.json', 'w') as file:
-    json.dump(clauses, file)
+#clauses = get_clauses('owl_test_2')
+#with open('clauses.json', 'w') as file:
+#    json.dump(clauses, file)
 
-#onto_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), os.pardir)), 'test/', 'test_v1.rdf')
-#res = check_model(onto_path)
-#with open('test.json', 'w') as file:
-#    json.dump(res, file)
+data_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), os.pardir)), 'test/', 'test_v1.rdf')
+rule_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), os.pardir)), 'server/', 'rules/', 'OWL_test_1.owl')
+res = check_model(data_path, rule_path)
+with open('test.json', 'w') as file:
+    json.dump(res, file)

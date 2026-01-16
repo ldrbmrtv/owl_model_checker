@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns="http://test#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+>
+  <rdf:Description rdf:about="http://test#storey_1">
+    <rdf:type rdf:nodeID="N53a63be5f661400c87c9d6c6e491dd2b"/>
+    <rdf:type rdf:resource="http://test#Storey"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:nodeID="N38c1891fec384f0096d5719061c0950d"/>
+    <rdf:type rdf:nodeID="N969587bbc1cb4392a935b86849ca22d7"/>
+    <in rdf:resource="http://test#usage_unit_1"/>
+    <in rdf:resource="http://test#usage_unit_0"/>
+    <isConnectedTo rdf:resource="http://test#necessary_staircase_0"/>
+    <isConnectedTo rdf:resource="http://test#external_staircase_b"/>
+    <isConnectedTo rdf:resource="http://test#necessary_staircase_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N497f162dcffc47afbb8ba50bee1b2a01">
+    <rdf:first rdf:resource="http://test#storey_0"/>
+    <rdf:rest rdf:nodeID="N0a6268caeb2742d7b8fc66217e31bfa6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7059ec51c7154328a4e0fded5ec5e88e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#separate_stairwell_0">
+    <rdf:type rdf:nodeID="N32f6f9d9655f4717b5dbc98887f3a83d"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://test#SeparateStairwell"/>
+    <rdf:type rdf:nodeID="Nd6e0338b996d49d491b96febe911190f"/>
+    <rdf:type rdf:nodeID="N7c91440044564ac18f92fc3d66e0c458"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9426fa7ad4d64056b265ca97a482c92a">
+    <rdf:first rdf:resource="http://test#Storey"/>
+    <rdf:rest rdf:nodeID="N7cf4ca7cf9ff42f8bf4d67762d2e7c69"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#storey_0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:nodeID="N5f40c7494ac44957b0fa45028bf1c840"/>
+    <rdf:type rdf:nodeID="N40679f2826e849518da7a4bde3ecb5c4"/>
+    <rdf:type rdf:resource="http://test#Storey"/>
+    <rdf:type rdf:nodeID="N6c250cdab7d04117b301d4cb3b800404"/>
+    <isConnectedTo rdf:resource="http://test#necessary_staircase_0"/>
+    <isConnectedTo rdf:resource="http://test#external_staircase_b"/>
+    <isConnectedTo rdf:resource="http://test#necessary_staircase_1"/>
+    <in rdf:resource="http://test#usage_unit_0"/>
+    <in rdf:resource="http://test#usage_unit_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N61470fcd44c74bbb9ce2517e89c7929f">
+    <owl:onClass rdf:nodeID="N7102c36ba39743888b1d8d8b41319013"/>
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N38c1891fec384f0096d5719061c0950d">
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <owl:allValuesFrom rdf:nodeID="N2e5be7e034994789867d1a129d042f18"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc37f0048bb864eebaa49f1bfc4e2c490">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:withRestrictions rdf:nodeID="Nebe897d8814d48559171cf1a07b92183"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne17cf62e689842b2a21e4959db12db4e">
+    <rdf:first rdf:resource="http://test#usage_unit_1"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8395ebcbcb0041ca87736cb1b5cfb17f">
+    <rdf:first rdf:nodeID="N07a8a543689e44ceb3dcf80a3fe16ebd"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne9e3d59fd5e84eb599aa8297bbd2f083">
+    <rdf:first rdf:resource="http://test#Storey"/>
+    <rdf:rest rdf:nodeID="Nad3665b122c04d1d866b6ea0163a303a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3c1462b6a52945b9bd483504dfcc0f43">
+    <rdf:first rdf:resource="http://test#external_staircase_b"/>
+    <rdf:rest rdf:nodeID="N25a305419b1f4e94a8b88fe0d798ca62"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3e1e7083f05a486d81f752e9b4caa392">
+    <owl:intersectionOf rdf:nodeID="Nae87d1d1ab24446c9f7de57a5b06f5e6"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndf43e755e79e404ab2688c7102a1ca0f">
+    <rdf:first rdf:nodeID="N51f191956b8a4cf1be8290aba91b5ce5"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6d0ebeb5e6c24410a5dc4cf76920eb07">
+    <rdf:rest rdf:nodeID="Nb83e1e0fe29b45d1a8555f6971d4c350"/>
+    <rdf:first rdf:resource="http://test#external_staircase_b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7717030638774bddb3979c28fdd8511b">
+    <owl:complementOf rdf:resource="http://test#ExternalStaircase"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#MustBeLocatedInSeparateStairwell">
+    <owl:equivalentClass rdf:nodeID="Nead3cb5f314841bbbfedc2f7fd5e8e9e"/>
+    <owl:equivalentClass rdf:nodeID="N8ab61dcd196644f0b334b4bd4acc89fc"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N620172dca45b40adada46eea2a4a7125">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#usage_unit_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:nodeID="Nf2930e61fe0647d0ba0c69d68fc360fd"/>
+    <rdf:type rdf:resource="http://test#UsageUnit"/>
+    <rdf:type rdf:nodeID="N92368e154e8b4688a66de6136e8e7e1e"/>
+    <rdf:type rdf:nodeID="N99b1a091348645d081fefdbab3eb8c6d"/>
+    <totalGrossFloorArea rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">209.76</totalGrossFloorArea>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6c250cdab7d04117b301d4cb3b800404">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:onProperty rdf:resource="http://test#connects"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1340046a274c41bbb3f205e1d25f7494">
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd9693691d6b54ef1a2a2141f0511201f">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://test#storey_3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb83e1e0fe29b45d1a8555f6971d4c350">
+    <rdf:first rdf:resource="http://test#necessary_staircase_0"/>
+    <rdf:rest rdf:nodeID="Ndff61fb7dee448fb8642ce3340790564"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7102c36ba39743888b1d8d8b41319013">
+    <owl:intersectionOf rdf:nodeID="Nc142fce32a424f7a95f516a66a50a41d"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N941ab798746f43c6866a0820b1b8fd18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:onProperty rdf:resource="http://test#connects"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#storey_2">
+    <rdf:type rdf:nodeID="N57aa9167ed7d4273a87bf6dd60b24211"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://test#Storey"/>
+    <rdf:type rdf:nodeID="N941ab798746f43c6866a0820b1b8fd18"/>
+    <rdf:type rdf:nodeID="Nfabbf49488c14c6792627080a43e7e7a"/>
+    <isConnectedTo rdf:resource="http://test#necessary_staircase_0"/>
+    <isConnectedTo rdf:resource="http://test#necessary_staircase_1"/>
+    <isConnectedTo rdf:resource="http://test#external_staircase_b"/>
+    <in rdf:resource="http://test#usage_unit_0"/>
+    <in rdf:resource="http://test#usage_unit_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6eae56f34585402880a5a61408f9860b">
+    <rdf:first rdf:resource="http://test#storey_0"/>
+    <rdf:rest rdf:nodeID="N5a9be1d07fa9463b9b3e14ebad2e137a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9002fbba217f4cca91ee94f3a9970e51">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="Nacc798f9392e48d98f2bd5d564ec58ba"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#necessary_staircase_0">
+    <connects rdf:resource="http://test#storey_3"/>
+    <connects rdf:resource="http://test#storey_2"/>
+    <connects rdf:resource="http://test#storey_1"/>
+    <connects rdf:resource="http://test#storey_0"/>
+    <rdf:type rdf:nodeID="N7a1c1c5737534c0089abcd0e8767b189"/>
+    <rdf:type rdf:nodeID="N620172dca45b40adada46eea2a4a7125"/>
+    <rdf:type rdf:nodeID="Nddbfd8da18464de7837de4998d3320ed"/>
+    <rdf:type rdf:resource="http://test#NecessaryStaircase"/>
+    <rdf:type rdf:nodeID="N9f66c458789346afaf3ea2b13b75f0f0"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N584bccdb25544272b504b7ffdb22ed24">
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+    <owl:onClass rdf:nodeID="Nd9b0e478e8bb440889df36654f980498"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://test#connects"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N44a6885108be4e9b9394423432ca44bc">
+    <rdf:rest rdf:nodeID="Ne17cf62e689842b2a21e4959db12db4e"/>
+    <rdf:first rdf:resource="http://test#usage_unit_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0a6268caeb2742d7b8fc66217e31bfa6">
+    <rdf:rest rdf:nodeID="N06db0cf415af4607b5db5b49e8d77cb0"/>
+    <rdf:first rdf:resource="http://test#storey_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nddfe45b3842b46cea6688434d18b4217">
+    <owl:complementOf rdf:resource="http://test#ExternalStaircase"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N03934c25d0994dca9cd3f680e244bc89">
+    <owl:intersectionOf rdf:nodeID="N39a16749619c4eab8212992c8f202540"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N82193bf6f9e041558e342f10db152716">
+    <owl:allValuesFrom rdf:nodeID="Ne646f5e36b854dfaa61cc9728a40af9a"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://test#in"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#storey_3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:nodeID="Ne4e5ce5df6e7498db82a8edd88cb1edc"/>
+    <rdf:type rdf:nodeID="Ne7cf1c0d800a4b44826a52b9ac6d2ea2"/>
+    <rdf:type rdf:nodeID="N3e6016c164c94dc0a4675af3d8241015"/>
+    <rdf:type rdf:resource="http://test#Storey"/>
+    <isConnectedTo rdf:resource="http://test#necessary_staircase_0"/>
+    <isConnectedTo rdf:resource="http://test#external_staircase_b"/>
+    <isConnectedTo rdf:resource="http://test#necessary_staircase_1"/>
+    <in rdf:resource="http://test#usage_unit_0"/>
+    <in rdf:resource="http://test#usage_unit_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb3f351e552ad49c5aa81db2be5894c66">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://test#BuildingClass2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N469fb2d834314113b70d8e83cbe6fd63">
+    <owl:oneOf rdf:nodeID="N497f162dcffc47afbb8ba50bee1b2a01"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nede413b6b94042aaaba55b369d654db7">
+    <owl:intersectionOf rdf:nodeID="N32b7d84117cf4f4f8113895bc8d2202d"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5c81b063a9034ccb8d159431ba2c0d54">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N70705a3259d644e1826801f779181484"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0d60f94069694379b79c3fdaaadd3123">
+    <owl:complementOf rdf:nodeID="Nf105e0e1a641401d8266fb74b6cf14c5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N87d7f090d44e456ba4fb60c611f4ef40">
+    <rdf:first rdf:resource="http://test#necessary_staircase_0"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndeac7d72ac124e548996902f96322011">
+    <rdf:rest rdf:nodeID="N62a710abb3064c5f95d741777c4b887f"/>
+    <rdf:first rdf:resource="http://test#storey_2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N97b03b62b4ce4a62a17d65b565559431">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="N63f88af09fb14977873de3b1a3e17c0d"/>
+    <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5e47b912f7104671a3cf31853251c6a2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:onProperty rdf:resource="http://test#in"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc205382e356f4b5c80a382bf4da6a793">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://test#storey_3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#necessary_staircase_1">
+    <rdf:type rdf:resource="http://test#NecessaryStaircase"/>
+    <rdf:type rdf:nodeID="N22d49ffe1c4d46619cd8cc6f2b54bd10"/>
+    <rdf:type rdf:nodeID="Nddfe45b3842b46cea6688434d18b4217"/>
+    <rdf:type rdf:nodeID="N82193bf6f9e041558e342f10db152716"/>
+    <rdf:type rdf:nodeID="N2e85c0051b80465ab1c3709a57a88310"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <connects rdf:resource="http://test#storey_0"/>
+    <connects rdf:resource="http://test#storey_3"/>
+    <connects rdf:resource="http://test#storey_1"/>
+    <connects rdf:resource="http://test#storey_2"/>
+    <in rdf:resource="http://test#separate_stairwell_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N62a710abb3064c5f95d741777c4b887f">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://test#storey_3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nce8a6861f613461fae801fa841617057">
+    <rdf:rest rdf:nodeID="Nb7955fd64c6843eab258cf6967faef1f"/>
+    <rdf:first rdf:resource="http://test#usage_unit_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0a13c8049aab4998a95ea6a722b559e9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N7b8e2a909a51466ebdbfd9301a7a8a44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N33a3ae3a2bb949348ee0c74803dcad31">
+    <rdf:first rdf:resource="http://test#storey_3"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N960eda9f4035477aa24815ede7bf1f03">
+    <owl:complementOf rdf:nodeID="N75701969373a4e2c9aa0f7098361434c"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7cf4ca7cf9ff42f8bf4d67762d2e7c69">
+    <rdf:rest rdf:nodeID="N5c81b063a9034ccb8d159431ba2c0d54"/>
+    <rdf:first rdf:nodeID="N7fbc3b7806b74060ab4b1260c2dc8729"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#external_staircase_b">
+    <connects rdf:resource="http://test#storey_0"/>
+    <connects rdf:resource="http://test#storey_3"/>
+    <connects rdf:resource="http://test#storey_2"/>
+    <connects rdf:resource="http://test#storey_1"/>
+    <rdf:type rdf:resource="http://test#EscapeRoute"/>
+    <rdf:type rdf:nodeID="N5e47b912f7104671a3cf31853251c6a2"/>
+    <rdf:type rdf:resource="http://test#ExternalStaircase"/>
+    <rdf:type rdf:nodeID="N7059ec51c7154328a4e0fded5ec5e88e"/>
+    <rdf:type rdf:nodeID="N409fc87f360c4e79bc2fa089a766cfcf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nddbfd8da18464de7837de4998d3320ed">
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N70705a3259d644e1826801f779181484">
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:nodeID="N0a13c8049aab4998a95ea6a722b559e9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na38c6765a7284bcd9b74ffcc3053cf55">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://test#separate_stairwell_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3328ec3800b446c1826c47bab46693d1">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://test#necessary_staircase_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6fbeebc040e541018b5fdc61b5bc470b">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://test#storey_3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N17bc3b46ae964438991d6b64c6f4c70b">
+    <owl:complementOf rdf:resource="http://test#ExternalStaircase"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nac6e5673b4b441278d5391ea42fa6232">
+    <rdf:first rdf:resource="http://test#storey_2"/>
+    <rdf:rest rdf:nodeID="Nc205382e356f4b5c80a382bf4da6a793"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6901270b2475435cb87900bffbcc4c3f">
+    <owl:oneOf rdf:nodeID="N314f010289274b76bc41d76ce4809178"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na89ac41f1708405887a8409e5488165a">
+    <rdf:first rdf:resource="http://test#storey_1"/>
+    <rdf:rest rdf:nodeID="N5497fc07110a4ce7ae16d0ef4084ec2c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9f470dd3306b421c9b23372853009d78">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:onProperty rdf:resource="http://test#connects"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndff61fb7dee448fb8642ce3340790564">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://test#necessary_staircase_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9f66c458789346afaf3ea2b13b75f0f0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:complementOf rdf:resource="http://test#ExternalStaircase"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N969587bbc1cb4392a935b86849ca22d7">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:onProperty rdf:resource="http://test#connects"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndc3f48116aae416987ab02019df3f442">
+    <rdf:first rdf:resource="http://test#necessary_staircase_1"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N07a8a543689e44ceb3dcf80a3fe16ebd">
+    <owl:complementOf rdf:nodeID="N584bccdb25544272b504b7ffdb22ed24"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na8b15eca1dfa44989ceabc159ad228b8">
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:nodeID="Nb7435578eefa4184b5e3e9402c245e99"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nff58d09af45349609080b2f1a7042444">
+    <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Nd9da0d3c1ff648bdbfbb8a15ba9eb9d2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N866b583617494bfa8cde11760c5d3fb4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="N74e0fe68a5e94dd4a15bff08f3b8fd4e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N25a305419b1f4e94a8b88fe0d798ca62">
+    <rdf:rest rdf:nodeID="Nd9b5daa7c2d441db93c01293f8fbb833"/>
+    <rdf:first rdf:resource="http://test#necessary_staircase_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N07b886469de7449691393a3c30ed6351">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N960eda9f4035477aa24815ede7bf1f03"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N57aa9167ed7d4273a87bf6dd60b24211">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <owl:allValuesFrom rdf:nodeID="N866b583617494bfa8cde11760c5d3fb4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N05dc2d16e4d64d5980b3ba83cb03f0f1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:complementOf rdf:resource="http://test#MustBeLocatedInSeparateStairwell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1ce84f19e0ba4759b8d66968541c4744">
+    <rdf:first rdf:resource="http://test#storey_1"/>
+    <rdf:rest rdf:nodeID="Nac6e5673b4b441278d5391ea42fa6232"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf2930e61fe0647d0ba0c69d68fc360fd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="N3b7f9a01e0a345a493e338918317497f"/>
+    <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N49218e9c17434f2faab25405c86d93c1">
+    <rdf:rest rdf:nodeID="N7ad0c25a87e74b5aa5d2526fdeb017ad"/>
+    <rdf:first rdf:nodeID="N7717030638774bddb3979c28fdd8511b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#NecessaryStaircase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#usage_unit_0">
+    <rdf:type rdf:resource="http://test#UsageUnit"/>
+    <rdf:type rdf:nodeID="N1340046a274c41bbb3f205e1d25f7494"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:nodeID="Ne866eeedc29d4194af8a896ffbc89960"/>
+    <rdf:type rdf:nodeID="N97b03b62b4ce4a62a17d65b565559431"/>
+    <totalGrossFloorArea rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">209.76</totalGrossFloorArea>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nacc798f9392e48d98f2bd5d564ec58ba">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:complementOf rdf:resource="http://test#MustBeLocatedInSeparateStairwell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N63f88af09fb14977873de3b1a3e17c0d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="N8027249e915d43efa00d4a19c89f6b40"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne1915b80159a498bbe9e9005d7bd392e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://test#EscapeRoute"/>
+    <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4ab859304d544933a806c8f4a54e3225">
+    <rdf:rest rdf:nodeID="Ndc3f48116aae416987ab02019df3f442"/>
+    <rdf:first rdf:resource="http://test#necessary_staircase_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3e20900662774aee9fcdc253f940dee9">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N75701969373a4e2c9aa0f7098361434c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+    <owl:onProperty rdf:resource="http://test#connects"/>
+    <owl:onClass rdf:nodeID="N71a1d5a23d8c4685898f3bcce2b7cc70"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7c91440044564ac18f92fc3d66e0c458">
+    <owl:allValuesFrom rdf:nodeID="Nbda211b3fa4f47a792d733e5cf5d0f4d"/>
+    <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne4e5ce5df6e7498db82a8edd88cb1edc">
+    <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Ne6b50477663e4c64b385d704b97e97fd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd9da0d3c1ff648bdbfbb8a15ba9eb9d2">
+    <owl:oneOf rdf:nodeID="Ne6784bf5b0ae493194ca3007a4461918"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3b7f9a01e0a345a493e338918317497f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="N6eae56f34585402880a5a61408f9860b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N314f010289274b76bc41d76ce4809178">
+    <rdf:first rdf:resource="http://test#storey_0"/>
+    <rdf:rest rdf:nodeID="Na89ac41f1708405887a8409e5488165a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N06f632e0205f448fa1e12a2fed9d2e96">
+    <rdf:rest rdf:nodeID="N6fbeebc040e541018b5fdc61b5bc470b"/>
+    <rdf:first rdf:resource="http://test#storey_2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N99b1a091348645d081fefdbab3eb8c6d">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:onProperty rdf:resource="http://test#connects"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd9b5daa7c2d441db93c01293f8fbb833">
+    <rdf:first rdf:resource="http://test#necessary_staircase_1"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N22d49ffe1c4d46619cd8cc6f2b54bd10">
+    <owl:onProperty rdf:resource="http://test#connects"/>
+    <owl:allValuesFrom rdf:nodeID="N469fb2d834314113b70d8e83cbe6fd63"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N49833c66ed324b6da21f21b7e76e7460">
+    <rdf:first rdf:nodeID="N500544ddf5f34d28abdab255c4ef2cb5"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N06db0cf415af4607b5db5b49e8d77cb0">
+    <rdf:first rdf:resource="http://test#storey_2"/>
+    <rdf:rest rdf:nodeID="N33a3ae3a2bb949348ee0c74803dcad31"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N40679f2826e849518da7a4bde3ecb5c4">
+    <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="N46fd71fb82534600ad546fa26a23f700"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N24b18dbf02404094a2f53b4ff2b8b569">
+    <rdf:first rdf:nodeID="N0d60f94069694379b79c3fdaaadd3123"/>
+    <rdf:rest rdf:nodeID="N8395ebcbcb0041ca87736cb1b5cfb17f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N51f191956b8a4cf1be8290aba91b5ce5">
+    <owl:onProperty rdf:resource="http://test#totalGrossFloorArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:nodeID="Nd508445661da4c63932c8b9de8bcc339"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N770d8166b305456787f0cbb540606eb8">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N05dc2d16e4d64d5980b3ba83cb03f0f1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2e85c0051b80465ab1c3709a57a88310">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfabbf49488c14c6792627080a43e7e7a">
+    <owl:allValuesFrom rdf:nodeID="N400947d559924b5ba4079cc346b5f472"/>
+    <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N13d4b7107c3c407ca069ed1257f3972f">
+    <owl:oneOf rdf:nodeID="N0e45c4ca887e42ba88fb93c882d1c894"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0e45c4ca887e42ba88fb93c882d1c894">
+    <rdf:first rdf:resource="http://test#storey_0"/>
+    <rdf:rest rdf:nodeID="N1ce84f19e0ba4759b8d66968541c4744"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#connects">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://test#isConnectedTo"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8904836fed9343c384484ba28a0367c1">
+    <rdf:first rdf:resource="http://test#BuildingClass1"/>
+    <rdf:rest rdf:nodeID="N25cb6361035b4fb6931f18b70d265a23"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N25cb6361035b4fb6931f18b70d265a23">
+    <rdf:first rdf:resource="http://test#BuildingClass2"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbda211b3fa4f47a792d733e5cf5d0f4d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="N87d7f090d44e456ba4fb60c611f4ef40"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N400947d559924b5ba4079cc346b5f472">
+    <owl:oneOf rdf:nodeID="Nb78c5fbbdff545eeabfbd1afa9de8adb"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne7cf1c0d800a4b44826a52b9ac6d2ea2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:onProperty rdf:resource="http://test#connects"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8ab61dcd196644f0b334b4bd4acc89fc">
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://test#SeparateStairwell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nebe897d8814d48559171cf1a07b92183">
+    <rdf:first rdf:nodeID="N59e6c452fc10435b90012160b5a85359"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9d49746c72f84d3b97cccde386668e35">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="N6c3333506d454ef89ad434b61234f573"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N32f6f9d9655f4717b5dbc98887f3a83d">
+    <owl:onProperty rdf:resource="http://test#connects"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N92368e154e8b4688a66de6136e8e7e1e">
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf105e0e1a641401d8266fb74b6cf14c5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:nodeID="Nc4beec1c12694e88b53d844c08a599b2"/>
+    <owl:onProperty rdf:resource="http://test#in"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb78c5fbbdff545eeabfbd1afa9de8adb">
+    <rdf:first rdf:resource="http://test#external_staircase_b"/>
+    <rdf:rest rdf:nodeID="N4ab859304d544933a806c8f4a54e3225"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne646f5e36b854dfaa61cc9728a40af9a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="Na38c6765a7284bcd9b74ffcc3053cf55"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd508445661da4c63932c8b9de8bcc339">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <owl:withRestrictions rdf:nodeID="N49833c66ed324b6da21f21b7e76e7460"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#totalGrossFloorArea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N71a1d5a23d8c4685898f3bcce2b7cc70">
+    <owl:intersectionOf rdf:nodeID="N9426fa7ad4d64056b265ca97a482c92a"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1b9e03b5c5c047288e4f0d13974f84d1">
+    <rdf:first rdf:resource="http://test#usage_unit_1"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7ad0c25a87e74b5aa5d2526fdeb017ad">
+    <rdf:rest rdf:nodeID="N07b886469de7449691393a3c30ed6351"/>
+    <rdf:first rdf:nodeID="Nf91a0d324e7c4011a7900c2c8e2e82f3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd6e0338b996d49d491b96febe911190f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naf02fc2bf848459b8cb5acdcc6b9cf49">
+    <rdf:first rdf:resource="http://test#BuildingClass1"/>
+    <rdf:rest rdf:nodeID="Nb3f351e552ad49c5aa81db2be5894c66"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N74e0fe68a5e94dd4a15bff08f3b8fd4e">
+    <rdf:rest rdf:nodeID="N95674b89314e45cb922961d6d93a5473"/>
+    <rdf:first rdf:resource="http://test#usage_unit_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#BuildingClass1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#EscapeRoute">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N39a16749619c4eab8212992c8f202540">
+    <rdf:rest rdf:nodeID="N9002fbba217f4cca91ee94f3a9970e51"/>
+    <rdf:first rdf:resource="http://test#NecessaryStaircaseInSeparateStairwell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf91a0d324e7c4011a7900c2c8e2e82f3">
+    <owl:complementOf rdf:nodeID="Na8b15eca1dfa44989ceabc159ad228b8"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N173d846853754e4cad536b8e778a9656">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="Nfa7c158592b549e5b56076c57dbfe76b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7a1c1c5737534c0089abcd0e8767b189">
+    <owl:onProperty rdf:resource="http://test#connects"/>
+    <owl:allValuesFrom rdf:nodeID="N6901270b2475435cb87900bffbcc4c3f"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7fbc3b7806b74060ab4b1260c2dc8729">
+    <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://test#EscapeRoute"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc4beec1c12694e88b53d844c08a599b2">
+    <owl:unionOf rdf:nodeID="N8904836fed9343c384484ba28a0367c1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#separate_stairwell_1">
+    <rdf:type rdf:nodeID="Nff58d09af45349609080b2f1a7042444"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:nodeID="N3e20900662774aee9fcdc253f940dee9"/>
+    <rdf:type rdf:resource="http://test#SeparateStairwell"/>
+    <rdf:type rdf:nodeID="N9f470dd3306b421c9b23372853009d78"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N59e6c452fc10435b90012160b5a85359">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5a9be1d07fa9463b9b3e14ebad2e137a">
+    <rdf:first rdf:resource="http://test#storey_1"/>
+    <rdf:rest rdf:nodeID="N06f632e0205f448fa1e12a2fed9d2e96"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#BuildingClass2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3e6016c164c94dc0a4675af3d8241015">
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="N886f528d8261411baae63eea463b2175"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N886f528d8261411baae63eea463b2175">
+    <owl:oneOf rdf:nodeID="Nce8a6861f613461fae801fa841617057"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N33e5e81e466c4748a68db40e5e953bfa">
+    <rdf:first rdf:resource="http://test#necessary_staircase_0"/>
+    <rdf:rest rdf:nodeID="N3328ec3800b446c1826c47bab46693d1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nad3665b122c04d1d866b6ea0163a303a">
+    <rdf:first rdf:nodeID="Ne1915b80159a498bbe9e9005d7bd392e"/>
+    <rdf:rest rdf:nodeID="Nebf66b607528447eb0a684a00d595127"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N24bd1396729f47069d782d1f7f71e3ab">
+    <owl:onProperty rdf:resource="http://test#totalGrossFloorArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:nodeID="Nc37f0048bb864eebaa49f1bfc4e2c490"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5497fc07110a4ce7ae16d0ef4084ec2c">
+    <rdf:first rdf:resource="http://test#storey_2"/>
+    <rdf:rest rdf:nodeID="Nd9693691d6b54ef1a2a2141f0511201f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nebf66b607528447eb0a684a00d595127">
+    <rdf:first rdf:nodeID="N61470fcd44c74bbb9ce2517e89c7929f"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#NecessaryStaircaseInSeparateStairwell">
+    <owl:equivalentClass rdf:nodeID="N874cf7fd145641c6aeaa1ab862923a9b"/>
+    <owl:equivalentClass rdf:nodeID="N3e1e7083f05a486d81f752e9b4caa392"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://test#NecessaryStaircase"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N46fd71fb82534600ad546fa26a23f700">
+    <owl:oneOf rdf:nodeID="N3c1462b6a52945b9bd483504dfcc0f43"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb7435578eefa4184b5e3e9402c245e99">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Naf02fc2bf848459b8cb5acdcc6b9cf49"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfa7c158592b549e5b56076c57dbfe76b">
+    <rdf:first rdf:resource="http://test#external_staircase_b"/>
+    <rdf:rest rdf:nodeID="N33e5e81e466c4748a68db40e5e953bfa"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7b8e2a909a51466ebdbfd9301a7a8a44">
+    <rdf:rest rdf:nodeID="Ndf43e755e79e404ab2688c7102a1ca0f"/>
+    <rdf:first rdf:resource="http://test#UsageUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N95674b89314e45cb922961d6d93a5473">
+    <rdf:first rdf:resource="http://test#usage_unit_1"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne6b50477663e4c64b385d704b97e97fd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="N6d0ebeb5e6c24410a5dc4cf76920eb07"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc142fce32a424f7a95f516a66a50a41d">
+    <rdf:first rdf:resource="http://test#UsageUnit"/>
+    <rdf:rest rdf:nodeID="Ndd64f7cad8f140a98acf54d1b421b362"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne866eeedc29d4194af8a896ffbc89960">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:onProperty rdf:resource="http://test#connects"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndd64f7cad8f140a98acf54d1b421b362">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N24bd1396729f47069d782d1f7f71e3ab"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6c3333506d454ef89ad434b61234f573">
+    <rdf:rest rdf:nodeID="N1b9e03b5c5c047288e4f0d13974f84d1"/>
+    <rdf:first rdf:resource="http://test#usage_unit_0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#SeparateStairwell">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#in">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd9b0e478e8bb440889df36654f980498">
+    <owl:intersectionOf rdf:nodeID="Ne9e3d59fd5e84eb599aa8297bbd2f083"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N53a63be5f661400c87c9d6c6e491dd2b">
+    <owl:allValuesFrom rdf:nodeID="N173d846853754e4cad536b8e778a9656"/>
+    <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne6784bf5b0ae493194ca3007a4461918">
+    <rdf:first rdf:resource="http://test#necessary_staircase_1"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N409fc87f360c4e79bc2fa089a766cfcf">
+    <owl:onProperty rdf:resource="http://test#connects"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="N13d4b7107c3c407ca069ed1257f3972f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2e5be7e034994789867d1a129d042f18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="N44a6885108be4e9b9394423432ca44bc"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8027249e915d43efa00d4a19c89f6b40">
+    <rdf:first rdf:resource="http://test#storey_0"/>
+    <rdf:rest rdf:nodeID="Na8e4efb5e68b4374b30289db5f913fbe"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#ExternalStaircase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#isConnectedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb7955fd64c6843eab258cf6967faef1f">
+    <rdf:first rdf:resource="http://test#usage_unit_1"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N32b7d84117cf4f4f8113895bc8d2202d">
+    <rdf:rest rdf:nodeID="N770d8166b305456787f0cbb540606eb8"/>
+    <rdf:first rdf:resource="http://test#NecessaryStaircaseInSeparateStairwell"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5f40c7494ac44957b0fa45028bf1c840">
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="N9d49746c72f84d3b97cccde386668e35"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nead3cb5f314841bbbfedc2f7fd5e8e9e">
+    <owl:onProperty rdf:resource="http://test#in"/>
+    <owl:someValuesFrom rdf:resource="http://test#SeparateStairwell"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#NotCompliant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N03934c25d0994dca9cd3f680e244bc89"/>
+    <owl:equivalentClass rdf:nodeID="Nede413b6b94042aaaba55b369d654db7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#Storey">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test#UsageUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N874cf7fd145641c6aeaa1ab862923a9b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N49218e9c17434f2faab25405c86d93c1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nae87d1d1ab24446c9f7de57a5b06f5e6">
+    <rdf:rest rdf:nodeID="N24b18dbf02404094a2f53b4ff2b8b569"/>
+    <rdf:first rdf:nodeID="N17bc3b46ae964438991d6b64c6f4c70b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://test_data">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na8e4efb5e68b4374b30289db5f913fbe">
+    <rdf:first rdf:resource="http://test#storey_1"/>
+    <rdf:rest rdf:nodeID="Ndeac7d72ac124e548996902f96322011"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N500544ddf5f34d28abdab255c4ef2cb5">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</xsd:maxInclusive>
+  </rdf:Description>
+</rdf:RDF>
