@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://test_rule#"
+     xml:base="http://test_rule"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://test_rule"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://test_rule#connects -->
+
+    <owl:ObjectProperty rdf:about="http://test_rule#connects">
+        <owl:inverseOf rdf:resource="http://test_rule#isConnectedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://test_rule#in -->
+
+    <owl:ObjectProperty rdf:about="http://test_rule#in"/>
+    
+
+
+    <!-- http://test_rule#isConnectedTo -->
+
+    <owl:ObjectProperty rdf:about="http://test_rule#isConnectedTo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://test_rule#totalGrossFloorArea -->
+
+    <owl:DatatypeProperty rdf:about="http://test_rule#totalGrossFloorArea">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://test_rule#BuildingClass1 -->
+
+    <owl:Class rdf:about="http://test_rule#BuildingClass1"/>
+    
+
+
+    <!-- http://test_rule#BuildingClass2 -->
+
+    <owl:Class rdf:about="http://test_rule#BuildingClass2"/>
+    
+
+
+    <!-- http://test_rule#Clause1 -->
+
+    <owl:Class rdf:about="http://test_rule#Clause1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://test_rule#ExternalStaircase"/>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label>Not an external staircase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://test_rule#Clause2 -->
+
+    <owl:Class rdf:about="http://test_rule#Clause2">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://test_rule#in"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://test_rule#BuildingClass1"/>
+                                    <rdf:Description rdf:about="http://test_rule#BuildingClass2"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label>Not in buildings of building classes 1 and 2</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://test_rule#Clause3 -->
+
+    <owl:Class rdf:about="http://test_rule#Clause3">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://test_rule#connects"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://test_rule#Storey"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://test_rule#isConnectedTo"/>
+                                        <owl:someValuesFrom rdf:resource="http://test_rule#EscapeRoute"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://test_rule#in"/>
+                                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                        <owl:onClass>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://test_rule#UsageUnit"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://test_rule#totalGrossFloorArea"/>
+                                                        <owl:someValuesFrom>
+                                                            <rdfs:Datatype>
+                                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                                    <rdf:Description>
+                                                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</xsd:maxInclusive>
+                                                                    </rdf:Description>
+                                                                </owl:withRestrictions>
+                                                            </rdfs:Datatype>
+                                                        </owl:someValuesFrom>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:onClass>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label>Not connecting a maximum of two storeys within the same usage unit with a total gross floor area of no more than 200 m², if a different escape route can be reached on each storey</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://test_rule#Clause4 -->
+
+    <owl:Class rdf:about="http://test_rule#Clause4">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test_rule#in"/>
+                <owl:someValuesFrom rdf:resource="http://test_rule#SeparateStairwell"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:label>Must be located in a separate stairwell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://test_rule#EscapeRoute -->
+
+    <owl:Class rdf:about="http://test_rule#EscapeRoute"/>
+    
+
+
+    <!-- http://test_rule#ExternalStaircase -->
+
+    <owl:Class rdf:about="http://test_rule#ExternalStaircase"/>
+    
+
+
+    <!-- http://test_rule#NecessaryStaircase -->
+
+    <owl:Class rdf:about="http://test_rule#NecessaryStaircase"/>
+    
+
+
+    <!-- http://test_rule#NecessaryStaircaseInSeparateStairwell -->
+
+    <owl:Class rdf:about="http://test_rule#NecessaryStaircaseInSeparateStairwell">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://test_rule#Clause1"/>
+                    <rdf:Description rdf:about="http://test_rule#Clause2"/>
+                    <rdf:Description rdf:about="http://test_rule#Clause3"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://test_rule#NecessaryStaircase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://test_rule#NotCompliant -->
+
+    <owl:Class rdf:about="http://test_rule#NotCompliant">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://test_rule#NecessaryStaircaseInSeparateStairwell"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://test_rule#Clause4"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://test_rule#SeparateStairwell -->
+
+    <owl:Class rdf:about="http://test_rule#SeparateStairwell"/>
+    
+
+
+    <!-- http://test_rule#Storey -->
+
+    <owl:Class rdf:about="http://test_rule#Storey"/>
+    
+
+
+    <!-- http://test_rule#UsageUnit -->
+
+    <owl:Class rdf:about="http://test_rule#UsageUnit"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

@@ -14,13 +14,21 @@ async def api_get_rules():
 async def api_get_rule(id: str):
     return FileResponse(get_rule(id))
 
-#@app.post('/api/rule/{id}')
-#async def api_check_model(id: str, file: UploadFile=File(...)):
-#    return check_model(id, file)
+@app.get('/api/rule/{id}/clauses')
+async def api_get_clauses(id: str):
+    return get_clauses(id)
 
 @app.post('/api/check_model')
-async def api_check_model(id: str, file: UploadFile=File(...)):
-    return check_model(id, file)
+async def api_check_model(data_file: UploadFile = File(...),
+                          rule_file: UploadFile = File(...)
+):
+    with open(temp_data, 'wb') as f:
+        shutil.copyfileobj(data_file.file, f)
+    
+    with open(temp_rule, 'wb') as f:
+        shutil.copyfileobj(rule_file.file, f)
+    
+    return check_model(temp_data, temp_rule)
 
 
 if __name__ == "__main__":
