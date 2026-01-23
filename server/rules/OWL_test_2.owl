@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://test#"
-     xml:base="http://test"
+<rdf:RDF xmlns="http://test_rule#"
+     xml:base="http://test_rule"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -21,23 +21,23 @@
     
 
 
-    <!-- http://test#connects -->
+    <!-- http://test_rule#connects -->
 
-    <owl:ObjectProperty rdf:about="http://test#connects">
-        <owl:inverseOf rdf:resource="http://test#isConnectedTo"/>
+    <owl:ObjectProperty rdf:about="http://test_rule#connects">
+        <owl:inverseOf rdf:resource="http://test_rule#isConnectedTo"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://test#in -->
+    <!-- http://test_rule#in -->
 
-    <owl:ObjectProperty rdf:about="http://test#in"/>
+    <owl:ObjectProperty rdf:about="http://test_rule#in"/>
     
 
 
-    <!-- http://test#isConnectedTo -->
+    <!-- http://test_rule#isConnectedTo -->
 
-    <owl:ObjectProperty rdf:about="http://test#isConnectedTo"/>
+    <owl:ObjectProperty rdf:about="http://test_rule#isConnectedTo"/>
     
 
 
@@ -52,9 +52,9 @@
     
 
 
-    <!-- http://test#totalGrossFloorArea -->
+    <!-- http://test_rule#totalGrossFloorArea -->
 
-    <owl:DatatypeProperty rdf:about="http://test#totalGrossFloorArea">
+    <owl:DatatypeProperty rdf:about="http://test_rule#totalGrossFloorArea">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:DatatypeProperty>
     
@@ -71,24 +71,24 @@
     
 
 
-    <!-- http://test#BuildingClass1 -->
+    <!-- http://test_rule#BuildingClass1 -->
 
-    <owl:Class rdf:about="http://test#BuildingClass1"/>
+    <owl:Class rdf:about="http://test_rule#BuildingClass1"/>
     
 
 
-    <!-- http://test#BuildingClass2 -->
+    <!-- http://test_rule#BuildingClass2 -->
 
-    <owl:Class rdf:about="http://test#BuildingClass2"/>
+    <owl:Class rdf:about="http://test_rule#BuildingClass2"/>
     
 
 
-    <!-- http://test#Clause1 -->
+    <!-- http://test_rule#Clause1 -->
 
-    <owl:Class rdf:about="http://test#Clause1">
+    <owl:Class rdf:about="http://test_rule#Clause1">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:complementOf rdf:resource="http://test#ExternalStaircase"/>
+                <owl:complementOf rdf:resource="http://test_rule#ExternalStaircase"/>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:label>Not an external staircase</rdfs:label>
@@ -96,19 +96,19 @@
     
 
 
-    <!-- http://test#Clause2 -->
+    <!-- http://test_rule#Clause2 -->
 
-    <owl:Class rdf:about="http://test#Clause2">
+    <owl:Class rdf:about="http://test_rule#Clause2">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://test#in"/>
+                        <owl:onProperty rdf:resource="http://test_rule#in"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://test#BuildingClass1"/>
-                                    <rdf:Description rdf:about="http://test#BuildingClass2"/>
+                                    <rdf:Description rdf:about="http://test_rule#BuildingClass1"/>
+                                    <rdf:Description rdf:about="http://test_rule#BuildingClass2"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -121,32 +121,32 @@
     
 
 
-    <!-- http://test#Clause3 -->
+    <!-- http://test_rule#Clause3 -->
 
-    <owl:Class rdf:about="http://test#Clause3">
+    <owl:Class rdf:about="http://test_rule#Clause3">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:complementOf>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://test#connects"/>
+                        <owl:onProperty rdf:resource="http://test_rule#connects"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
                         <owl:onClass>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://test#Storey"/>
+                                    <rdf:Description rdf:about="http://test_rule#Storey"/>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
-                                        <owl:someValuesFrom rdf:resource="http://test#EscapeRoute"/>
+                                        <owl:onProperty rdf:resource="http://test_rule#isConnectedTo"/>
+                                        <owl:someValuesFrom rdf:resource="http://test_rule#EscapeRoute"/>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://test#in"/>
+                                        <owl:onProperty rdf:resource="http://test_rule#in"/>
                                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                                         <owl:onClass>
                                             <owl:Class>
                                                 <owl:intersectionOf rdf:parseType="Collection">
-                                                    <rdf:Description rdf:about="http://test#UsageUnit"/>
+                                                    <rdf:Description rdf:about="http://test_rule#UsageUnit"/>
                                                     <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="http://test#totalGrossFloorArea"/>
+                                                        <owl:onProperty rdf:resource="http://test_rule#totalGrossFloorArea"/>
                                                         <owl:someValuesFrom>
                                                             <rdfs:Datatype>
                                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
@@ -174,13 +174,13 @@
     
 
 
-    <!-- http://test#Clause4 -->
+    <!-- http://test_rule#Clause4 -->
 
-    <owl:Class rdf:about="http://test#Clause4">
+    <owl:Class rdf:about="http://test_rule#Clause4">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://test#in"/>
-                <owl:someValuesFrom rdf:resource="http://test#SeparateStairwell"/>
+                <owl:onProperty rdf:resource="http://test_rule#in"/>
+                <owl:someValuesFrom rdf:resource="http://test_rule#SeparateStairwell"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:label>Must be located in a separate stairwell</rdfs:label>
@@ -188,50 +188,50 @@
     
 
 
-    <!-- http://test#EscapeRoute -->
+    <!-- http://test_rule#EscapeRoute -->
 
-    <owl:Class rdf:about="http://test#EscapeRoute"/>
+    <owl:Class rdf:about="http://test_rule#EscapeRoute"/>
     
 
 
-    <!-- http://test#ExternalStaircase -->
+    <!-- http://test_rule#ExternalStaircase -->
 
-    <owl:Class rdf:about="http://test#ExternalStaircase"/>
+    <owl:Class rdf:about="http://test_rule#ExternalStaircase"/>
     
 
 
-    <!-- http://test#NecessaryStaircase -->
+    <!-- http://test_rule#NecessaryStaircase -->
 
-    <owl:Class rdf:about="http://test#NecessaryStaircase"/>
+    <owl:Class rdf:about="http://test_rule#NecessaryStaircase"/>
     
 
 
-    <!-- http://test#NecessaryStaircaseInSeparateStairwell -->
+    <!-- http://test_rule#NecessaryStaircaseInSeparateStairwell -->
 
-    <owl:Class rdf:about="http://test#NecessaryStaircaseInSeparateStairwell">
+    <owl:Class rdf:about="http://test_rule#NecessaryStaircaseInSeparateStairwell">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://test#Clause1"/>
-                    <rdf:Description rdf:about="http://test#Clause2"/>
-                    <rdf:Description rdf:about="http://test#Clause3"/>
+                    <rdf:Description rdf:about="http://test_rule#Clause1"/>
+                    <rdf:Description rdf:about="http://test_rule#Clause2"/>
+                    <rdf:Description rdf:about="http://test_rule#Clause3"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://test#NecessaryStaircase"/>
+        <rdfs:subClassOf rdf:resource="http://test_rule#NecessaryStaircase"/>
     </owl:Class>
     
 
 
-    <!-- http://test#NotCompliant -->
+    <!-- http://test_rule#NotCompliant -->
 
-    <owl:Class rdf:about="http://test#NotCompliant">
+    <owl:Class rdf:about="http://test_rule#NotCompliant">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://test#NecessaryStaircaseInSeparateStairwell"/>
+                    <rdf:Description rdf:about="http://test_rule#NecessaryStaircaseInSeparateStairwell"/>
                     <owl:Class>
-                        <owl:complementOf rdf:resource="http://test#Clause4"/>
+                        <owl:complementOf rdf:resource="http://test_rule#Clause4"/>
                     </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
@@ -240,21 +240,21 @@
     
 
 
-    <!-- http://test#SeparateStairwell -->
+    <!-- http://test_rule#SeparateStairwell -->
 
-    <owl:Class rdf:about="http://test#SeparateStairwell"/>
+    <owl:Class rdf:about="http://test_rule#SeparateStairwell"/>
     
 
 
-    <!-- http://test#Storey -->
+    <!-- http://test_rule#Storey -->
 
-    <owl:Class rdf:about="http://test#Storey"/>
+    <owl:Class rdf:about="http://test_rule#Storey"/>
     
 
 
-    <!-- http://test#UsageUnit -->
+    <!-- http://test_rule#UsageUnit -->
 
-    <owl:Class rdf:about="http://test#UsageUnit"/>
+    <owl:Class rdf:about="http://test_rule#UsageUnit"/>
 </rdf:RDF>
 
 

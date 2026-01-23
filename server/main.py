@@ -2,17 +2,19 @@ import os
 import rdflib
 from owlready2 import *
 import json
-import sys
 from explain_owlapy import *
+import shutil
 
 
 dir_path = os.path.dirname(os.path.abspath(__file__))
 rule_files = 'rules/'
 rule_base = 'rules.json'
-temp_data_ttl = 'temp_data.ttl'
-temp_data_nt = 'temp_data.nt'
-temp_data_imported = 'temp_data_imported.owl'
-temp_classified = 'temp_classified.owl'
+temp_dir = 'temp/'
+temp_rule = os.path.join(dir_path, temp_dir, 'temp_rule.owl')
+temp_data = os.path.join(dir_path, temp_dir, 'temp_data.owl')
+temp_nt = os.path.join(dir_path, temp_dir, 'temp.nt')
+temp_merged = os.path.join(dir_path, temp_dir, 'temp_merged.owl')
+temp_classified = os.path.join(dir_path, temp_dir, 'temp_classified.owl')
 log_file = 'temp_log.txt'
 
 rule_base_path = os.path.join(dir_path, rule_base)
@@ -31,13 +33,12 @@ def get_rule(id: str):
 def get_onto(response_path: str):
     g = rdflib.Graph()
     g.parse(response_path)
-    file_path_nt = os.path.join(dir_path, temp_data_nt)
-    g.serialize(destination=file_path_nt, format='nt')
+    g.serialize(destination=temp_nt, format='nt')
 
-    onto = get_ontology(os.path.join('file://', file_path_nt)).load()
+    onto = get_ontology(os.path.join('file://', temp_nt)).load()
     #for inst in onto.individuals():
     #    close_world(inst)
-    onto.save(file_path_nt)
+    #onto.save(temp_nt)
     return onto
 
 
@@ -45,6 +46,8 @@ def get_clauses(id: str):
 
     onto_path = get_rule(id)
     onto = get_onto(onto_path)
+    
+    classes = list(onto.classes())
 
     fail_class = onto['NotCompliant']
     equivalent_to = fail_class.INDIRECT_equivalent_to[0]
@@ -77,19 +80,18 @@ def get_clauses(id: str):
     return res
 
 
-def copy_instances_rdflib(source_path, target_path):
+def copy_instances(source_path, target_path):
 
-    onto_file = 'merged.owl'
     source_onto = rdflib.Graph().parse(source_path)
     target_onto = rdflib.Graph().parse(target_path)
-    merged = source_onto + target_onto   # union of triples
-    merged.serialize(temp_data_imported, format='xml')
-    return temp_data_imported
+    merged = source_onto + target_onto
+    merged.serialize(temp_merged, format='xml')
+    return temp_merged
 
 
 def check_model(data_path: str, rule_path: str):
-    
-    onto_path = copy_instances_rdflib(data_path, rule_path)
+
+    onto_path = copy_instances(data_path, rule_path)
 
     onto = get_onto(onto_path)    
 
@@ -196,12 +198,8 @@ def check_model(data_path: str, rule_path: str):
             return str(e)
 
 
-#clauses = get_clauses('owl_test_2')
-#with open('clauses.json', 'w') as file:
-#    json.dump(clauses, file)
-
-data_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), os.pardir)), 'test/', 'test_v1.rdf')
-rule_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), os.pardir)), 'server/', 'rules/', 'OWL_test_1.owl')
-res = check_model(data_path, rule_path)
-with open('test.json', 'w') as file:
-    json.dump(res, file)
+#data_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), os.pardir)), 'test/', 'test_v1.rdf')
+#rule_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), os.pardir)), 'server/', 'rules/', 'OWL_test_1.owl')
+#res = check_model(data_path, rule_path)
+#with open('test.json', 'w') as file:
+#    json.dump(res, file)
