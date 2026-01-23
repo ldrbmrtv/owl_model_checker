@@ -1,131 +1,229 @@
-@prefix : <http://test/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix test: <http://test#> .
-@base <http://test/> .
-
-<http://test> rdf:type owl:Ontology .
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://test#in
-test:in rdf:type owl:ObjectProperty .
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://test#"
+     xml:base="http://test"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://test"/>
+    
 
 
-###  http://test#verbindet
-test:verbindet rdf:type owl:ObjectProperty .
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
 
 
-###  http://test#verbundenZu
-test:verbundenZu rdf:type owl:ObjectProperty .
+    <!-- http://test#connects -->
+
+    <owl:ObjectProperty rdf:about="http://test#connects">
+        <owl:inverseOf rdf:resource="http://test#isConnectedTo"/>
+    </owl:ObjectProperty>
+    
 
 
-#################################################################
-#    Data properties
-#################################################################
+    <!-- http://test#in -->
 
-###  http://test#bruttoGrundfläche
-test:bruttoGrundfläche rdf:type owl:DatatypeProperty ,
-                                owl:FunctionalProperty .
+    <owl:ObjectProperty rdf:about="http://test#in"/>
+    
 
 
-#################################################################
-#    Classes
-#################################################################
+    <!-- http://test#isConnectedTo -->
 
-###  http://test#Außentreppe
-test:Außentreppe rdf:type owl:Class .
+    <owl:ObjectProperty rdf:about="http://test#isConnectedTo"/>
+    
 
 
-###  http://test#EigenerTreppenraum
-test:EigenerTreppenraum rdf:type owl:Class .
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
 
 
-###  http://test#Gebäudeklasse1
-test:Gebäudeklasse1 rdf:type owl:Class .
+    <!-- http://test#totalGrossFloorArea -->
+
+    <owl:DatatypeProperty rdf:about="http://test#totalGrossFloorArea">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
 
 
-###  http://test#Gebäudeklasse2
-test:Gebäudeklasse2 rdf:type owl:Class .
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
 
 
-###  http://test#Geschoss
-test:Geschoss rdf:type owl:Class .
+    <!-- http://test#BuildingClass1 -->
+
+    <owl:Class rdf:about="http://test#BuildingClass1"/>
+    
 
 
-###  http://test#MussInEigenemTreppenraumLiegen
-test:MussInEigenemTreppenraumLiegen rdf:type owl:Class ;
-                                    owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                          owl:onProperty test:in ;
-                                                          owl:someValuesFrom test:EigenerTreppenraum
-                                                        ] .
+    <!-- http://test#BuildingClass2 -->
+
+    <owl:Class rdf:about="http://test#BuildingClass2"/>
+    
 
 
-###  http://test#NotwendigeTreppe
-test:NotwendigeTreppe rdf:type owl:Class .
+    <!-- http://test#EscapeRoute -->
+
+    <owl:Class rdf:about="http://test#EscapeRoute"/>
+    
 
 
-###  http://test#NotwendigeTreppeInEigenemTreppenraum
-test:NotwendigeTreppeInEigenemTreppenraum rdf:type owl:Class ;
-                                          owl:equivalentClass [ rdf:type owl:Class ;
-                                                                owl:complementOf test:Außentreppe
-                                                              ] ,
-                                                              [ rdf:type owl:Class ;
-                                                                owl:complementOf [ rdf:type owl:Restriction ;
-                                                                                   owl:onProperty test:in ;
-                                                                                   owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                                        owl:unionOf ( test:Gebäudeklasse1
-                                                                                                                      test:Gebäudeklasse2
-                                                                                                                    )
-                                                                                                      ]
-                                                                                 ]
-                                                              ] ,
-                                                              [ rdf:type owl:Class ;
-                                                                owl:complementOf [ rdf:type owl:Restriction ;
-                                                                                   owl:onProperty test:verbindet ;
-                                                                                   owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                                                                   owl:onClass [ owl:intersectionOf ( test:Geschoss
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty test:verbundenZu ;
-                                                                                                                        owl:someValuesFrom test:Rettungsweg
-                                                                                                                      ]
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty test:in ;
-                                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                                                        owl:onClass [ owl:intersectionOf ( test:Nutzungseinheit
-                                                                                                                                                           [ rdf:type owl:Restriction ;
-                                                                                                                                                             owl:onProperty test:bruttoGrundfläche ;
-                                                                                                                                                             owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                                                                  owl:onDatatype xsd:float ;
-                                                                                                                                                                                  owl:withRestrictions ( [ xsd:maxInclusive "200.0"^^xsd:float
-                                                                                                                                                                                                         ]
-                                                                                                                                                                                                       )
-                                                                                                                                                                                ]
-                                                                                                                                                           ]
-                                                                                                                                                         ) ;
-                                                                                                                                      rdf:type owl:Class
-                                                                                                                                    ]
-                                                                                                                      ]
-                                                                                                                    ) ;
-                                                                                                 rdf:type owl:Class
-                                                                                               ]
-                                                                                 ]
-                                                              ] ;
-                                          rdfs:subClassOf test:MussInEigenemTreppenraumLiegen ,
-                                                          test:NotwendigeTreppe .
+    <!-- http://test#ExternalStaircase -->
+
+    <owl:Class rdf:about="http://test#ExternalStaircase"/>
+    
 
 
-###  http://test#Nutzungseinheit
-test:Nutzungseinheit rdf:type owl:Class .
+    <!-- http://test#MustBeLocatedInSeparateStairwell -->
+
+    <owl:Class rdf:about="http://test#MustBeLocatedInSeparateStairwell">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://test#in"/>
+                <owl:someValuesFrom rdf:resource="http://test#SeparateStairwell"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
 
 
-###  http://test#Rettungsweg
-test:Rettungsweg rdf:type owl:Class .
+    <!-- http://test#NecessaryStaircase -->
+
+    <owl:Class rdf:about="http://test#NecessaryStaircase"/>
+    
 
 
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+    <!-- http://test#NecessaryStaircaseInSeparateStairwell -->
+
+    <owl:Class rdf:about="http://test#NecessaryStaircaseInSeparateStairwell">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://test#ExternalStaircase"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://test#in"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://test#BuildingClass1"/>
+                                            <rdf:Description rdf:about="http://test#BuildingClass2"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://test#connects"/>
+                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                                <owl:onClass>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://test#Storey"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://test#isConnectedTo"/>
+                                                <owl:someValuesFrom rdf:resource="http://test#EscapeRoute"/>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://test#in"/>
+                                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                                <owl:onClass>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://test#UsageUnit"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="http://test#totalGrossFloorArea"/>
+                                                                <owl:someValuesFrom>
+                                                                    <rdfs:Datatype>
+                                                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                                                        <owl:withRestrictions rdf:parseType="Collection">
+                                                                            <rdf:Description>
+                                                                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</xsd:maxInclusive>
+                                                                            </rdf:Description>
+                                                                        </owl:withRestrictions>
+                                                                    </rdfs:Datatype>
+                                                                </owl:someValuesFrom>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:onClass>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:onClass>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://test#NecessaryStaircase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://test#NotCompliant -->
+
+    <owl:Class rdf:about="http://test#NotCompliant">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://test#NecessaryStaircaseInSeparateStairwell"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://test#MustBeLocatedInSeparateStairwell"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://test#SeparateStairwell -->
+
+    <owl:Class rdf:about="http://test#SeparateStairwell"/>
+    
+
+
+    <!-- http://test#Storey -->
+
+    <owl:Class rdf:about="http://test#Storey"/>
+    
+
+
+    <!-- http://test#UsageUnit -->
+
+    <owl:Class rdf:about="http://test#UsageUnit"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
